@@ -22,7 +22,10 @@ const OptionWithoutUser = ({ onClose }) => {
         className="cursor-pointer [border:none] p-2.5 bg-[transparent] w-[311px] my-0 mx-[!important] absolute bottom-[33px] left-[10px] h-[35px] flex flex-row flex-wrap items-center justify-center box-border z-[2] hover:bg-lightgray-200 hover:gap-[10px]"
         id="signUp"
       >
-        <button className="cursor-pointer [border:none] p-0 bg-[transparent] w-[262px] relative text-base capitalize font-inter text-black whitespace-pre-wrap text-left flex items-center shrink-0">{`    Sign up `}</button>
+        <button className="cursor-pointer [border:none] p-0 bg-[transparent] w-[262px] relative text-base capitalize font-inter text-black whitespace-pre-wrap text-left flex items-center shrink-0">
+        {" "}
+        Sign Up
+        </button>
       </button>
     </div>
   );
