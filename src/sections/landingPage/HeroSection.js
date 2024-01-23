@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import SearchComponent from "./SearchComponent";
+import SearchComponent from "../../components/search/SearchComponent";
 
 const HeroSection = () => {
   useEffect(() => {
@@ -33,16 +33,23 @@ const HeroSection = () => {
   }, []);
   return (
     <section
-      className="self-stretch h-[659px] flex flex-col items-center justify-center relative gap-[10px] bg-[url('/public/herosection@3x.png')] bg-cover bg-no-repeat bg-[top] text-center text-43xl text-white font-plus-jakarta-sans"
+      className="self-stretch h-[659px] flex flex-col items-center justify-center relative gap-[10px] text-center text-43xl text-white font-plus-jakarta-sans"
       id="hero"
     >
-      <div className="w-[1529px] absolute my-0 mx-[!important] top-[439px] left-[1px] bg-midnightblue-400 h-[220px] z-[0]" />
-      <div
-        className="h-[644px] my-0 mx-[!important] absolute top-[calc(50%_-_321.5px)] left-[calc(50%_-_757px)] overflow-hidden shrink-0 flex flex-col items-center justify-end py-[74px] px-0 box-border gap-[172px] [&.animate]:animate-[1s_ease-out_1s_1_normal_forwards_slide-in-top] opacity-[0] z-[1]"
+      <img
+        className="self-stretch flex-1 relative max-w-full overflow-hidden max-h-full object-cover [&.animate]:animate-[1s_ease_0.5s_1_normal_forwards_fade-in] opacity-[0] z-[0]"
+        loading="eager"
+        alt=""
+        src="/herosection@3x.png"
         data-animate-on-scroll
-      >
+      />
+      <div className="w-[1530px] h-[651px] my-0 mx-[!important] absolute top-[calc(50%_-_321.5px)] left-[calc(50%_-_765px)] overflow-hidden shrink-0 flex flex-col items-center justify-end py-[74px] px-0 box-border gap-[172px] z-[1]">
         <div
-          className="self-stretch flex flex-col items-center justify-center [&.animate]:animate-[1s_ease-in-out_0s_1_normal_forwards_fade-in] opacity-[0]"
+          className="w-[calc(100%_+_16px)] h-[calc(100%_-_424px)] absolute my-0 mx-[!important] top-[431px] right-[-9px] bottom-[-7px] left-[-7px] bg-midnightblue-400 [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-bottom] opacity-[0] z-[0]"
+          data-animate-on-scroll
+        />
+        <div
+          className="self-stretch flex flex-col items-center justify-center [&.animate]:animate-[1s_ease-in-out_0.8s_1_normal_forwards_fade-in] opacity-[0] z-[1]"
           data-animate-on-scroll
         >
           <b className="w-[1513px] relative flex items-center justify-center [text-shadow:0px_4px_4px_rgba(0,_0,_0,_0.25)]">

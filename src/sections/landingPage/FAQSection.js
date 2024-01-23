@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
   Accordion,
   AccordionSummary,
@@ -8,6 +8,12 @@ import {
 } from "@mui/material";
 
 const FAQSection = () => {
+
+  const [expanded, setExpanded] = useState(null);
+  const handleChange = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : null);
+  };
+
   useEffect(() => {
     const scrollAnimElements = document.querySelectorAll(
       "[data-animate-on-scroll]"
@@ -94,7 +100,7 @@ const FAQSection = () => {
               </div>
               <div className="w-[629px] relative box-border h-px border-t-[1px] border-solid border-neutral-04" />
             </div>
-            <Accordion className="w-[751px]" sx={{ width: 751 }}>
+            <Accordion className="w-[751px]" sx={{ width: 751 }} expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
               <AccordionSummary expandIcon={<Icon>expand_more</Icon>}>
                 <Typography>How do I cancel my reservation?</Typography>
               </AccordionSummary>
@@ -113,7 +119,7 @@ const FAQSection = () => {
                 </Typography>
               </AccordionDetails>
             </Accordion>
-            <Accordion className="w-[751px]" sx={{ width: 751 }}>
+            <Accordion className="w-[751px]" sx={{ width: 751 }} expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
               <AccordionSummary expandIcon={<Icon>expand_more</Icon>}>
                 <Typography>What if my host cancels my reservation?</Typography>
               </AccordionSummary>
@@ -130,7 +136,7 @@ const FAQSection = () => {
                 </Typography>
               </AccordionDetails>
             </Accordion>
-            <Accordion className="w-[751px]" sx={{ width: 751 }}>
+            <Accordion className="w-[751px]" sx={{ width: 751 }} expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
               <AccordionSummary expandIcon={<Icon>expand_more</Icon>}>
                 <Typography>
                   How do I change the date of my reservation?
@@ -140,7 +146,7 @@ const FAQSection = () => {
                 <Typography>{`Ensure that you are logged in to your Urbanstay account. Navigate to the 'My Reservations' section within your account dashboard. Locate the reservation you want to modify in the list of your bookings. Review the changes to your reservation, including any associated costs due to date modifications.  Once you are satisfied with the new dates and any applicable fees, proceed to confirm the changes. `}</Typography>
               </AccordionDetails>
             </Accordion>
-            <Accordion className="w-[751px]" sx={{ width: 751 }}>
+            <Accordion className="w-[751px]" sx={{ width: 751 }} expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
               <AccordionSummary expandIcon={<Icon>expand_more</Icon>}>
                 <Typography>
                   What is the reimbursement policy of UrbanStay?

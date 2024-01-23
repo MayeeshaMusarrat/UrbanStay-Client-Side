@@ -1,7 +1,7 @@
 import { useState, useCallback, useEffect } from "react";
 import { TextField, InputAdornment, Icon, IconButton } from "@mui/material";
-import Calendar from "./Calendar";
-import PortalDrawer from "./PortalDrawer";
+import Calendar from "../calendars/searchBarCalendar/Calendar";
+import PortalDrawer from "../portals/PortalDrawer";
 
 const SearchComponent = () => {
   const [isCalendarOpen, setCalendarOpen] = useState(false);
@@ -46,7 +46,7 @@ const SearchComponent = () => {
   return (
     <>
       <div
-        className="flex flex-col items-start justify-start [&.animate]:animate-[1s_ease_1.5s_1_normal_forwards_slide-in-bottom] opacity-[0]"
+        className="flex flex-col items-start justify-start [&.animate]:animate-[1s_ease_0.5s_1_normal_forwards_slide-in-bottom] opacity-[0] z-[2]"
         data-animate-on-scroll
       >
         <div className="w-[1349px] h-14 relative">

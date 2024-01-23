@@ -1,15 +1,15 @@
 import { useEffect } from "react";
-import Header from "../components/Header";
-import HeroSection from "../components/HeroSection";
-import IntroSection from "../components/IntroSection";
-import ExploreBySection from "../components/ExploreBySection";
-import Intersection from "../components/Intersection";
-import ServiceSection from "../components/ServiceSection";
-import PreferenceSection from "../components/PreferenceSection";
-import FeaturedSection from "../components/FeaturedSection";
-import TestimonialSection from "../components/TestimonialSection";
-import FAQSection from "../components/FAQSection";
-import Footer from "../components/Footer";
+import Header from "../../components/header/Header";
+import Footer from "../../components/footer/Footer";
+import HeroSection from "../../sections/landingPage/HeroSection";
+import IntroSection from '../../sections/landingPage/IntroSection';
+import ExploreBySection from "../../sections/landingPage/ExploreBySection";
+import Intersection from "../../sections/landingPage/Intersection";
+import ServiceSection from "../../sections/landingPage/ServiceSection";
+import PreferenceSection from "../../sections/landingPage/PreferenceSection";
+import FeaturedSection from "../../sections/landingPage/FeaturedSection";
+import TestimonialSection from "../../sections/landingPage/TestimonialSection";
+import FAQSection from "../../sections/landingPage/FAQSection";
 
 const LandingPage = () => {
   useEffect(() => {
@@ -43,7 +43,7 @@ const LandingPage = () => {
   }, []);
   return (
     <div
-      className="w-full relative bg-white overflow-hidden flex flex-col items-center justify-center [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-bottom] opacity-[0]"
+      className="w-full h-[7098px] relative bg-white overflow-hidden flex flex-col items-center justify-center [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-bottom] opacity-[0]"
       data-animate-on-scroll
     >
       <Header />
@@ -56,15 +56,9 @@ const LandingPage = () => {
       <FeaturedSection />
       <div className="w-[1530px] relative bg-white h-[35px]" />
       <section
-        className="self-stretch h-[895px] overflow-hidden shrink-0 flex flex-row flex-wrap items-center justify-center relative gap-[10px]"
+        className="self-stretch h-[900px] overflow-hidden shrink-0 flex flex-row flex-wrap items-center justify-center relative"
         id="testimonials"
       >
-        <img
-          className="w-[calc(100%_-_3px)] absolute my-0 mx-[!important] h-full top-[0px] right-[1px] bottom-[0px] left-[2px] max-w-full overflow-hidden max-h-full object-cover z-[0]"
-          alt=""
-          src="/pseudo@2x.png"
-          data-scroll-to="pseudoImage"
-        />
         <TestimonialSection />
       </section>
       <FAQSection />

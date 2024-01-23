@@ -1,12 +1,41 @@
-import { memo, useState, useRef, useCallback } from "react";
-import OptionWithoutUser from "./OptionWithoutUser";
-import PortalPopup from "./PortalPopup";
-import Navbar from "./Navbar";
+import { memo, useState, useRef, useCallback, useEffect } from "react";
+import OptionWithoutUser from "../dropdownOptions/userNotLoggedIn/OptionsWithoutUser";
+import PortalPopup from "../portals/PortalPopup";
+import Navbar from "../navigations/landingPageNavigators/Navbar";
 
 const Header = memo(() => {
   const profileContainerRef = useRef(null);
   const [isOptionWithoutUserPopupOpen, setOptionWithoutUserPopupOpen] =
     useState(false);
+  useEffect(() => {
+    const scrollAnimElements = document.querySelectorAll(
+      "[data-animate-on-scroll]"
+    );
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting || entry.intersectionRatio > 0) {
+            const targetElement = entry.target;
+            targetElement.classList.add("animate");
+            observer.unobserve(targetElement);
+          }
+        }
+      },
+      {
+        threshold: 0.15,
+      }
+    );
+
+    for (let i = 0; i < scrollAnimElements.length; i++) {
+      observer.observe(scrollAnimElements[i]);
+    }
+
+    return () => {
+      for (let i = 0; i < scrollAnimElements.length; i++) {
+        observer.unobserve(scrollAnimElements[i]);
+      }
+    };
+  }, []);
 
   const openOptionWithoutUserPopup = useCallback(() => {
     setOptionWithoutUserPopupOpen(true);
@@ -18,7 +47,10 @@ const Header = memo(() => {
 
   return (
     <>
-      <div className="self-stretch bg-white shadow-[0px_4px_5px_rgba(0,_0,_0,_0.25)] h-[69px] overflow-hidden shrink-0 flex flex-row items-center justify-center py-4 px-[15px] box-border relative gap-[308px]">
+      <div
+        className="self-stretch h-[69px] bg-white shadow-[0px_4px_5px_rgba(0,_0,_0,_0.25)] overflow-hidden shrink-0 flex flex-row items-center justify-center py-4 px-[15px] box-border relative gap-[308px] [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-top] opacity-[0]"
+        data-animate-on-scroll
+      >
         <Navbar />
         <img
           className="w-[97px] absolute my-0 mx-[!important] top-[8px] left-[24px] h-[51px] object-cover z-[1]"

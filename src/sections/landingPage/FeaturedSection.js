@@ -135,11 +135,12 @@ const FeaturedSection = () => {
             <div className="rounded-8xs bg-white flex flex-row items-center justify-center py-1.5 px-4">
               <b className="relative leading-[23.28px] capitalize">Featured</b>
             </div>
-            <div className="bg-midnightblue-100 flex flex-row items-center justify-center py-[7px] px-[5px] text-center text-3xl text-white font-montserrat">
-              <div className="relative tracking-[5px] leading-[26.4px] capitalize font-semibold">
-                FAMILY HOME
-              </div>
+          <div className="bg-midnightblue-100 flex flex-row items-center justify-center py-[7px] px-[10px] text-center text-[18px] text-white font-montserrat">
+            <div className="relative tracking-[5px] leading-[26.4px] capitalize font-semibold">
+              FAMILY HOME
             </div>
+          </div>
+
             <div className="w-[231px] relative h-[151px]">
               <div className="absolute right-[0px] bottom-[15px] rounded-tl-3xs rounded-tr-none rounded-br-none rounded-bl-3xs bg-slateblue-100 w-[100px] h-[87px]" />
               <img

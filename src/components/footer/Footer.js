@@ -45,7 +45,7 @@ const Footer = () => {
 
   return (
     <footer
-      className="w-[1530px] h-[491px] bg-gray-400 flex flex-col items-center justify-center pt-[15px] px-[124px] pb-0 box-border gap-[31px] [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-bottom] opacity-[0] text-left text-5xl text-white font-plus-jakarta-sans"
+      className="self-stretch flex-1 bg-gray-400 flex flex-col items-center justify-center pt-[15px] px-[124px] pb-0 gap-[31px] [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-bottom] opacity-[0] text-left text-5xl text-white font-plus-jakarta-sans"
       id="footer"
       data-scroll-to="footer"
       data-animate-on-scroll
