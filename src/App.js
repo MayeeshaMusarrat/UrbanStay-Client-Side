@@ -6,6 +6,9 @@ import {
   useLocation,
 } from "react-router-dom";
 import LandingPage from "./pages/landingPage/LandingPage";
+import GuestWelcome from "./pages/userPages/guest/GuestWelcome";
+import HostWelcome from "./pages/userPages/host/HostWelcome";
+import LeadingPage from "./pages/leadingPage/LeadingPage";
 
 function App() {
   const action = useNavigationType();
@@ -24,6 +27,18 @@ function App() {
 
     switch (pathname) {
       case "/":
+        title = "UrbanStay";
+        metaDescription = "";
+        break;
+      case "/guest-welcome":
+        title = "Welcome Guest!";
+        metaDescription = "";
+        break;
+      case "/host-welcome":
+        title = "Welcome Host!";
+        metaDescription = "";
+        break;
+      case "/leading-page":
         title = "UrbanStay";
         metaDescription = "";
         break;
@@ -46,6 +61,9 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<LandingPage />} />
+      <Route path="/guest-welcome" element={<GuestWelcome />} />
+      <Route path="/host-welcome" element={<HostWelcome />} />
+      <Route path="/leading-page" element={<LeadingPage />} />
     </Routes>
   );
 }
