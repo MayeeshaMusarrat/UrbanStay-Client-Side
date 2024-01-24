@@ -55,7 +55,8 @@ const LeadingPage = () => {
   }, [navigate]);
 
   return (
-    <div className="w-full min-h-screen flex items-center justify-center bg-white overflow-hidden py-[29px] px-6 box-border text-center text-6xl text-darkblue font-poppins">
+    <div className="w-full min-h-screen flex items-center justify-center bg-white overflow-hidden py-[29px] px-6 box-border text-center text-6xl lg:text-8xl xl:text-9xl text-darkblue font-poppins">
+      
       <div className="w-[1355px] h-[644px] flex flex-row flex-wrap items-end justify-center gap-[52px] z-[0]">
         <img
           className="h-[561px] w-[604px] relative object-cover [&.animate]:animate-[1s_ease_0s_1_normal_forwards_fade-in] opacity-[0]"
