@@ -133,7 +133,7 @@ const SignInPage = () => {
       <img
         className="w-[147px] absolute my-0 mx-[!important] top-[32px] left-[22px] h-[74px] object-cover cursor-pointer z-[2]"
         alt=""
-        src="/whitelogo.png"
+        src="/whiteLogo.png"
         onClick={onWhiteLogoImageClick}
       />
     </div>
