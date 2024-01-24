@@ -43,7 +43,12 @@ module.exports = {
           "300": "rgba(209, 209, 209, 0.95)",
         },
         silver: "#bababa",
-        darkblue: "#371dae",
+        darkblue: {
+          "100": "#371dae",
+          "200": "rgba(39, 15, 146, 0.98)",
+          "300": "rgba(56, 29, 173, 0.82)",
+        },
+        "text-color": "#252b42",
         blueviolet: "rgba(88, 57, 227, 0.93)",
         gainsboro: "#d9d9d9",
         "shade-02": "#222",

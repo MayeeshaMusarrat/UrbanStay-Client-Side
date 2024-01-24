@@ -48,7 +48,7 @@ const HostWelcome = () => {
   }, [navigate]);
 
   return (
-    <div className="w-full min-h-screen flex items-center justify-center bg-white overflow-hidden text-left text-11xl text-darkblue font-poppins">
+    <div className="w-full min-h-screen flex items-center justify-center bg-white overflow-hidden text-left text-11xl text-darkblue-100 font-poppins">
       <div className="absolute top-[calc(50%_-_290px)] left-[calc(50%_-_710px)] flex flex-row items-center justify-center gap-[37px]">
         <img
           className="h-[666px] w-[697px] relative object-cover [&.animate]:animate-[1s_ease_0s_1_normal_forwards_fade-in] opacity-[0]"
@@ -76,7 +76,7 @@ const HostWelcome = () => {
               <p className="m-0 font-medium">&nbsp;</p>
               <p className="m-0">
                 <span className="font-medium">{`Click the "Get Started" button to create a `}</span>
-                <b className="font-inter text-darkblue">{`host account `}</b>
+                <b className="font-inter text-darkblue-100">{`host account `}</b>
                 <span className="font-medium font-inter text-black">
                   and open your doors to a world of possibilities.
                 </span>

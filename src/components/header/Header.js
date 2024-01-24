@@ -59,7 +59,7 @@ const Header = memo(() => {
           src="/logo@2x.png"
         />
         <div
-          className="my-0 mx-[!important] absolute top-[16.4px] right-[31.5px] rounded-58xl-5 bg-white overflow-hidden flex flex-row items-center justify-end py-[3px] px-1 gap-[10px] cursor-pointer z-[2] border-[1px] border-solid border-lightgray-100 hover:box-border hover:border-[1px] hover:border-solid hover:border-silver active:box-border active:cursor-pointer active:border-[1px] active:border-solid active:border-silver"
+          className="my-0 mx-[!important] absolute top-[16.4px] right-[31.5px] rounded-58xl-5 bg-white overflow-hidden flex flex-row items-center justify-end py-[3px] px-1 gap-[10px] cursor-pointer z-[2] border-[1px] border-solid border-lightgray-100 hover:box-border hover:border-[1px] hover:border-solid hover:border-darkgray active:box-border"
           ref={profileContainerRef}
           onClick={openOptionWithoutUserPopup}
         >

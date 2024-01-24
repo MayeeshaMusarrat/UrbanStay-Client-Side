@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const OptionWithoutUser = ({ onClose }) => {
   const navigate = useNavigate();
   const onSignInBtnClick = useCallback(() => {
-    //navigate("/leading-page");
+    navigate("/signinpage");
   }, []);
   const onSignUpBtnClick = useCallback(() => {
     navigate("/leading-page");
@@ -12,7 +12,7 @@ const OptionWithoutUser = ({ onClose }) => {
 
   return (
     <div className="w-[329px] relative overflow-hidden flex flex-col items-start justify-start py-3.5 px-2.5 box-border gap-[10px] max-w-full max-h-full">
-      <div className="w-[311px] relative rounded-3xs bg-white shadow-[0px_4px_20px_rgba(0,_0,_0,_0.17)] h-[107px] z-[0]" />
+      <div className="w-[311px] relative rounded-3xs bg-white shadow-[0px_0px_20px_rgba(0,_0,_0,_0.05)] h-[107px] z-[0]" />
       <button
         className="cursor-pointer [border:none] p-2.5 bg-[transparent] w-[311px] my-0 mx-[!important] absolute bottom-[68px] left-[10px] h-[35px] flex flex-row flex-wrap items-center justify-center box-border z-[1] hover:bg-lightgray-200 hover:gap-[10px]"
         id="signin"

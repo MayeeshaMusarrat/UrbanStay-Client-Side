@@ -127,13 +127,13 @@ const LeadingPage = () => {
             <div className="w-[636px] relative box-border h-px border-t-[1px] border-solid border-lightgray-300" />
           </div>
           <button
-          className={`[border:none] py-[15px] px-[18px] bg-darkblue rounded-[9.08px] flex flex-row items-center justify-center hover:gap-[10px] ${
-            userType === "" ? "opacity-50 cursor-not-allowed" : "hover:cursor-pointer hover:bg-blueviolet "
+          className={`[border:none] py-[15px] px-[18px] bg-darkblue-100 rounded-[9.08px] flex flex-row items-center justify-center hover:gap-[10px] ${
+            userType === "" ?  "cursor-not-allowed bg-lightgray-100 " : "hover:bg-darkblue-300 hover:cursor-pointer"
           }`}
           onClick={onContinueButtonClick}
           disabled={userType === ""}
         >
-          <button className={`[border:none] p-0 bg-[transparent] relative text-xl capitalize font-bold font-inter text-white text-center inline-block ${
+          <button className={`[border:none] p-0 bg-[transparent] relative text-base capitalize font-bold font-inter text-white text-center inline-block ${
             userType === "" ? "cursor-not-allowed" : "hover:cursor-pointer"
         }`}>
             Continue

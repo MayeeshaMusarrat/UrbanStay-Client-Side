@@ -47,57 +47,57 @@ const GuestWelcome = () => {
     };
   }, []);
   return (
-    <div className="w-full min-h-screen flex items-center justify-center relative bg-white overflow-hidden text-left text-11xl text-darkblue font-poppins">
+    <div className="w-full relative bg-white h-[750px] overflow-hidden text-left text-11xl text-darkblue-100 font-poppins">
+    <img
+      className="absolute top-[44px] left-[33px] w-[120px] h-[63px] object-cover cursor-pointer"
+      loading="eager"
+      alt=""
+      src="/logo1@2x.png"
+      onClick={onLogoImageClick}
+    />
+    <div className="absolute top-[calc(50%_-_298px)] left-[calc(50%_-_652px)] flex flex-row items-center justify-start gap-[36px]">
       <img
-        className="absolute top-[44px] left-[33px] w-[120px] h-[63px] object-cover cursor-pointer"
-        loading="eager"
+        className="h-[608px] w-[618px] relative rounded-[90px] object-cover [&.animate]:animate-[1s_ease_0s_1_normal_forwards_fade-in] opacity-[0]"
         alt=""
-        src="/logo1@2x.png"
-        onClick={onLogoImageClick}
+        src="/renterpic@2x.png"
+        data-animate-on-scroll
       />
-      <div className="absolute top-[calc(50%_-_298px)] left-[calc(50%_-_652px)] flex flex-row items-center justify-start gap-[36px]">
-        <img
-          className="h-[608px] w-[618px] relative rounded-[90px] object-cover [&.animate]:animate-[1s_ease_0s_1_normal_forwards_fade-in] opacity-[0]"
-          alt=""
-          src="/renterpic@2x.png"
-          data-animate-on-scroll
-        />
-        <div
-          className="flex flex-col items-start justify-start gap-[23px] [&.animate]:animate-[1s_ease_0.5s_1_normal_forwards_slide-in-right] opacity-[0]"
-          data-animate-on-scroll
-        >
-          <b className="w-[666px] relative tracking-[0.1px] leading-[55px] inline-block h-[113px] shrink-0">
-            Searching for a Stay? You’re at the Right Place!
-          </b>
-          <div className="w-[652px] relative text-base leading-[34px] inline-block text-black font-inter">
-            <p className="m-0">
-              <span className="font-medium font-inter text-black">{`At UrbanStay, we believe in creating seamless and enjoyable experiences for our guests. By creating a `}</span>
-              <b className="font-inter text-darkblue">guest account</b>
-              <span className="font-medium">
-                , you unlock a world of convenience and personalized services
-                tailored just for you.
-              </span>
-            </p>
-            <p className="m-0 font-medium">&nbsp;</p>
-            <p className="m-0 font-medium">
-              Rest assured, your privacy is our top priority. We adhere to
-              strict security measures to safeguard your personal information.
-              Read our Privacy Policy to understand how we protect your data.
-            </p>
-            <p className="m-0 font-medium">&nbsp;</p>
-            <p className="m-0 font-medium">
-              Join UrbanStay today and embark on a journey where every stay
-              feels like home.
-            </p>
-          </div>
-          <GetStartedButtonContainer
-            onGeStartedBtnClick={onGeStartedBtnClick}
-            onGoBackBtnTextClick={onGoBackBtnTextClick}
-          />
+      <div
+        className="flex flex-col items-start justify-start gap-[23px] [&.animate]:animate-[1s_ease_0.5s_1_normal_forwards_slide-in-right] opacity-[0]"
+        data-animate-on-scroll
+      >
+        <b className="w-[666px] relative tracking-[0.1px] leading-[55px] inline-block h-[113px] shrink-0">
+          Searching for a Stay? You’re at the Right Place!
+        </b>
+        <div className="w-[652px] relative text-base leading-[34px] inline-block text-black font-inter">
+          <p className="m-0">
+            <span className="font-medium font-inter text-black">{`At UrbanStay, we believe in creating seamless and enjoyable experiences for our guests. By creating a `}</span>
+            <b className="font-inter text-darkblue-100">guest account</b>
+            <span className="font-medium">
+              , you unlock a world of convenience and personalized services
+              tailored just for you.
+            </span>
+          </p>
+          <p className="m-0 font-medium">&nbsp;</p>
+          <p className="m-0 font-medium">
+            Rest assured, your privacy is our top priority. We adhere to
+            strict security measures to safeguard your personal information.
+            Read our Privacy Policy to understand how we protect your data.
+          </p>
+          <p className="m-0 font-medium">&nbsp;</p>
+          <p className="m-0 font-medium">
+            Join UrbanStay today and embark on a journey where every stay
+            feels like home.
+          </p>
         </div>
+        <GetStartedButtonContainer
+          onGeStartedBtnClick={onGeStartedBtnClick}
+          onGoBackBtnTextClick={onGoBackBtnTextClick}
+        />
       </div>
     </div>
-  );
+  </div>
+ );
 };
 
 export default GuestWelcome;
