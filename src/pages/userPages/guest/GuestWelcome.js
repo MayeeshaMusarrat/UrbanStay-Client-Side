@@ -47,7 +47,7 @@ const GuestWelcome = () => {
     };
   }, []);
   return (
-    <div className="w-full relative bg-white h-[735px] overflow-hidden text-left text-11xl text-darkblue font-poppins">
+    <div className="w-full min-h-screen flex items-center justify-center relative bg-white overflow-hidden text-left text-11xl text-darkblue font-poppins">
       <img
         className="absolute top-[44px] left-[33px] w-[120px] h-[63px] object-cover cursor-pointer"
         loading="eager"

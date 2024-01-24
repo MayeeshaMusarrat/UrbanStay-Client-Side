@@ -33,7 +33,7 @@ const HeroSection = () => {
   }, []);
   return (
     <section
-      className="self-stretch h-[659px] flex flex-col items-center justify-center relative gap-[10px] text-center text-43xl text-white font-plus-jakarta-sans"
+      className="self-stretch h-[671px] flex flex-col items-center justify-center relative gap-[10px] text-center text-43xl text-white font-plus-jakarta-sans"
       id="hero"
     >
       <img
@@ -43,9 +43,9 @@ const HeroSection = () => {
         src="/herosection@3x.png"
         data-animate-on-scroll
       />
-      <div className="w-[1530px] h-[651px] my-0 mx-[!important] absolute top-[calc(50%_-_321.5px)] left-[calc(50%_-_765px)] overflow-hidden shrink-0 flex flex-col items-center justify-end py-[74px] px-0 box-border gap-[172px] z-[1]">
+      <div className="w-[1530px] h-[656px] my-0 mx-[!important] absolute top-[calc(50%_-_321.5px)] left-[calc(50%_-_765px)] overflow-hidden shrink-0 flex flex-col items-center justify-end py-[74px] px-0 box-border gap-[172px] z-[1]">
         <div
-          className="w-[calc(100%_+_16px)] h-[calc(100%_-_424px)] absolute my-0 mx-[!important] top-[431px] right-[-9px] bottom-[-7px] left-[-7px] bg-midnightblue-400 [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-bottom] opacity-[0] z-[0]"
+          className="self-stretch flex-1 overflow-hidden max-h-full max-w-full absolute my-0 mx-[!important] top-[431px] right-[-9px] bottom-[-7px] left-[-7px] bg-midnightblue-400 [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-bottom] opacity-[0] z-[0]"
           data-animate-on-scroll
         />
         <div

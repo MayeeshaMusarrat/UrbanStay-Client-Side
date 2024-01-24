@@ -48,7 +48,7 @@ const HostWelcome = () => {
   }, [navigate]);
 
   return (
-    <div className="w-full relative bg-white h-[735px] overflow-hidden text-left text-11xl text-darkblue font-poppins">
+    <div className="w-full min-h-screen flex items-center justify-center bg-white overflow-hidden text-left text-11xl text-darkblue font-poppins">
       <div className="absolute top-[calc(50%_-_290px)] left-[calc(50%_-_710px)] flex flex-row items-center justify-center gap-[37px]">
         <img
           className="h-[666px] w-[697px] relative object-cover [&.animate]:animate-[1s_ease_0s_1_normal_forwards_fade-in] opacity-[0]"
