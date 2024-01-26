@@ -50,18 +50,18 @@ const SearchComponent = () => {
         data-animate-on-scroll
       >
         <div className="w-[1349px] h-14 relative">
-          <div className="absolute top-[0px] left-[0px] rounded-tl-8xs rounded-tr-none rounded-br-none rounded-bl-8xs bg-white w-[1294px] h-14 overflow-hidden">
+          <div className="absolute top-[0px] left-[0px] bg-white w-[1294px] h-14 overflow-hidden">
             <TextField
               className="absolute top-[0px] left-[1012px]"
               color="info"
               placeholder="2 Rooms, 1 Guest"
               fullWidth={true}
               sx={{ width: 282 }}
-              variant="outlined"
+              variant="standard"
               multiline
             />
             <div
-              className="absolute top-[calc(50%_-_28px)] left-[calc(50%_-_223px)] bg-white box-border w-[588px] h-14 overflow-hidden cursor-pointer border-[1px] border-solid border-black"
+              className="absolute top-[calc(50%_-_28px)] left-[calc(50%_-_223px)] bg-white  w-[588px] h-14 overflow-hidden cursor-pointer "
               onClick={openCalendar}
             />
             <TextField
@@ -70,13 +70,13 @@ const SearchComponent = () => {
               size="medium"
               placeholder="Enter Destination"
               fullWidth={true}
-              variant="outlined"
+              variant="standard"
               type="text"
               sx={{ "& .MuiInputBase-root": { height: "56px" } }}
             />
           </div>
           <img
-            className="absolute top-[0px] left-[1293px] rounded-tl-none rounded-tr-8xs rounded-br-8xs rounded-bl-none w-14 h-14 overflow-hidden hover:bg-slateblue-200 hover:cursor-pointer"
+            className="absolute top-[0px] left-[1293px] w-14 h-14 overflow-hidden hover:bg-slateblue-200 hover:cursor-pointer"
             alt=""
             src="/searchbutton.svg"
           />
