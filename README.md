@@ -2,7 +2,7 @@
 
 Welcome to UrbanStay – Your Ultimate Accommodation Solution!
 <br>
-![LandingPage](https://github.com/MayeeshaMusarrat/UrbanStay-Client-Side/assets/112959521/91b9a704-df9c-45ca-9247-0e5507d100fd)
+![LandingPage](https://github.com/MayeeshaMusarrat/UrbanStay-Client-Side/assets/112959521/3e7cb9cc-9421-4331-af83-c8c8e8d64236)
 
 ## Overview
 
