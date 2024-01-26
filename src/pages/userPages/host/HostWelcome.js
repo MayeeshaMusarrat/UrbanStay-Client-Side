@@ -1,12 +1,13 @@
 import { useCallback, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import GetStartedButtonContainer from "../../../components/buttons/GetStartedButtonContainer";
+import BlueLogoIcon from "../../../components/logos/BlueLogoIcon";
 
 const HostWelcome = () => {
   const navigate = useNavigate();
 
   const onGeStartedBtnClick = useCallback(() => {
-    // Please sync "Host_signup_page" to the project
+    navigate('/host-signup-page');
   }, []);
 
   const onGoBackBtnTextClick = useCallback(() => {
@@ -51,7 +52,7 @@ const HostWelcome = () => {
     <div className="w-full min-h-screen flex items-center justify-center bg-white overflow-hidden text-left text-11xl text-darkblue-100 font-poppins">
       <div className="absolute top-[calc(50%_-_290px)] left-[calc(50%_-_710px)] flex flex-row items-center justify-center gap-[37px]">
         <img
-          className="h-[666px] w-[697px] relative object-cover [&.animate]:animate-[1s_ease_0s_1_normal_forwards_fade-in] opacity-[0]"
+          className="h-[658px] w-[697px] relative object-cover [&.animate]:animate-[1s_ease_0s_1_normal_forwards_fade-in] opacity-[0]"
           alt=""
           src="/hostpic@2x.png"
           data-animate-on-scroll
@@ -89,13 +90,7 @@ const HostWelcome = () => {
           </div>
         </div>
       </div>
-      <img
-        className="absolute top-[42px] left-[38px] w-[120px] h-[63px] object-cover cursor-pointer"
-        loading="eager"
-        alt=""
-        src="/logo1@2x.png"
-        onClick={onLogoImageClick}
-      />
+      <BlueLogoIcon logoTop={42} logoWidth={120} logoHeight={63} />
     </div>
   );
 };

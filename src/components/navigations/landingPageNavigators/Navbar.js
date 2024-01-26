@@ -43,7 +43,7 @@ const Navbar = () => {
         className="rounded-mini flex flex-row items-center justify-center py-[5px] px-0 cursor-pointer hover:cursor-pointer"
         onClick={onExploreContainerClick}
       >
-        <div className="h-[13px] relative tracking-[0.8px] uppercase font-semibold inline-block hover:font-bold hover:font-lato hover:text-2xs hover:text-slateblue-100">
+        <div className="h-[18px] relative tracking-[0.8px] uppercase font-semibold inline-block hover:font-bold hover:font-lato hover:text-2xs hover:text-slateblue-100">
           ExpLORE
         </div>
       </div>

@@ -2,6 +2,8 @@ import { memo, useState, useRef, useCallback, useEffect } from "react";
 import OptionWithoutUser from "../dropdownOptions/userNotLoggedIn/OptionsWithoutUser";
 import PortalPopup from "../portals/PortalPopup";
 import Navbar from "../navigations/landingPageNavigators/Navbar";
+import BlueLogoIcon from "../logos/BlueLogoIcon";
+
 
 const Header = memo(() => {
   const profileContainerRef = useRef(null);
@@ -52,12 +54,7 @@ const Header = memo(() => {
         data-animate-on-scroll
       >
         <Navbar />
-        <img
-          className="w-[97px] absolute my-0 mx-[!important] top-[8px] left-[24px] h-[51px] object-cover z-[1]"
-          loading="eager"
-          alt=""
-          src="/logo@2x.png"
-        />
+        <BlueLogoIcon logoTop={6} logoWidth={97} logoHeight={51} />
         <div
           className="my-0 mx-[!important] absolute top-[16.4px] right-[31.5px] rounded-58xl-5 bg-white overflow-hidden flex flex-row items-center justify-end py-[3px] px-1 gap-[10px] cursor-pointer z-[2] border-[1px] border-solid border-lightgray-100 hover:box-border hover:border-[1px] hover:border-solid hover:border-darkgray active:box-border"
           ref={profileContainerRef}

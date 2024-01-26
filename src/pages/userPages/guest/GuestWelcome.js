@@ -1,6 +1,7 @@
 import { useCallback, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import GetStartedButtonContainer from "../../../components/buttons/GetStartedButtonContainer";
+import BlueLogoIcon from "../../../components/logos/BlueLogoIcon";
 
 const GuestWelcome = () => {
   const navigate = useNavigate();
@@ -12,11 +13,7 @@ const GuestWelcome = () => {
   const onGoBackBtnTextClick = useCallback(() => {
     navigate("/leading-page");
   }, [navigate]);
-
-  const onLogoImageClick = useCallback(() => {
-    navigate("/");
-  }, [navigate]);
-
+  
   useEffect(() => {
     const scrollAnimElements = document.querySelectorAll(
       "[data-animate-on-scroll]"
@@ -46,15 +43,10 @@ const GuestWelcome = () => {
       }
     };
   }, []);
+ 
   return (
-    <div className="w-full relative bg-white h-[750px] overflow-hidden text-left text-11xl text-darkblue-100 font-poppins">
-    <img
-      className="absolute top-[44px] left-[33px] w-[120px] h-[63px] object-cover cursor-pointer"
-      loading="eager"
-      alt=""
-      src="/logo1@2x.png"
-      onClick={onLogoImageClick}
-    />
+    <div className="w-full relative bg-white min-h-screen overflow-hidden text-left text-11xl text-darkblue-100 font-poppins">
+   <BlueLogoIcon logoTop={42} logoWidth={120} logoHeight={63} />
     <div className="absolute top-[calc(50%_-_298px)] left-[calc(50%_-_652px)] flex flex-row items-center justify-start gap-[36px]">
       <img
         className="h-[608px] w-[618px] relative rounded-[90px] object-cover [&.animate]:animate-[1s_ease_0s_1_normal_forwards_fade-in] opacity-[0]"

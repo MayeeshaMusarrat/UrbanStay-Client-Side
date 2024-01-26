@@ -1,10 +1,11 @@
 import { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import BlueLogoIcon from "../../components/logos/BlueLogoIcon";
 
 const LeadingPage = () => {
   const navigate = useNavigate();
 
-  const [userType, setUserType] = useState(""); // State to track user selection
+  const [userType, setUserType] = useState("");
 
   useEffect(() => {
     const scrollAnimElements = document.querySelectorAll(
@@ -49,10 +50,6 @@ const LeadingPage = () => {
   const onRadioChange = (event) => {
     setUserType(event.target.value);
   };
-
-  const onLogoImageClick = useCallback(() => {
-    navigate("/");
-  }, [navigate]);
 
   return (
     <div className="w-full min-h-screen flex items-center justify-center bg-white overflow-hidden py-[29px] px-6 box-border text-center text-6xl lg:text-8xl xl:text-9xl text-darkblue font-poppins">
@@ -128,7 +125,7 @@ const LeadingPage = () => {
           </div>
           <button
           className={`[border:none] py-[15px] px-[18px] bg-darkblue-100 rounded-[9.08px] flex flex-row items-center justify-center hover:gap-[10px] ${
-            userType === "" ?  "cursor-not-allowed bg-lightgray-100 " : "hover:bg-darkblue-300 hover:cursor-pointer"
+            userType === "" ?  "cursor-not-allowed bg-lightgray-100 " : "hover:bg-darkblue-300 hover:cursor-pointer active:bg-darkblue-400"
           }`}
           onClick={onContinueButtonClick}
           disabled={userType === ""}
@@ -141,13 +138,7 @@ const LeadingPage = () => {
         </button>
         </div>
       </div>
-      <img
-        className="w-[120px] absolute my-0 mx-[!important] top-[42px] left-[28px] h-[63px] object-cover cursor-pointer z-[1]"
-        loading="eager"
-        alt=""
-        src="/logo1@2x.png"
-        onClick={onLogoImageClick}
-      />
+      <BlueLogoIcon logoTop={42} logoWidth={120} logoHeight={63} />
     </div>
   );
 };

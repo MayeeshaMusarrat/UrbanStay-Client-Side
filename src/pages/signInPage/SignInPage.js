@@ -1,6 +1,7 @@
 import { useState, useCallback, useEffect } from "react";
 import { TextField, InputAdornment, Icon, IconButton } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import WhiteLogoIcon from "../../components/logos/WhiteLogoIcon";
 
 const SignInPage = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -39,11 +40,7 @@ const SignInPage = () => {
   }, []);
 
   const onSignUpBtnTextClick = useCallback(() => {
-   // navigate("/leading-page");
-  }, [navigate]);
-
-  const onWhiteLogoImageClick = useCallback(() => {
-    navigate("/");
+    navigate("/leading-page");
   }, [navigate]);
 
   return (
@@ -127,15 +124,10 @@ const SignInPage = () => {
           data-animate-on-scroll
         >
           <span className="font-medium">{`Don’t have an account? `}</span>
-          <b className="[text-decoration:underline]">Sign Up</b>
+          <b className="hover: cursor-pointer hover:[text-decoration:underline]">Sign Up</b>
         </div>
       </div>
-      <img
-        className="w-[147px] absolute my-0 mx-[!important] top-[32px] left-[22px] h-[74px] object-cover cursor-pointer z-[2]"
-        alt=""
-        src="/whitelogo.png"
-        onClick={onWhiteLogoImageClick}
-      />
+     <WhiteLogoIcon />
     </div>
   );
 };

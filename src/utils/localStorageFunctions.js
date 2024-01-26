@@ -2,12 +2,16 @@
  * @param {string} key
  * returns JSON.parse(data)
  */
-export function loadData(key) {
-	try {
+export function loadData(key) 
+{
+	try 
+	{
 		let data = localStorage.getItem(key);
 		data = JSON.parse(data);
 		return data;
-	} catch (error) {
+	} 
+	catch (error) 
+	{
 		return undefined;
 	}
 }
@@ -16,6 +20,7 @@ export function loadData(key) {
  * @param {string} key
  * @param {any} data
  */
-export function saveData(key, data) {
+export function saveData(key, data) 
+{
 	localStorage.setItem(key, JSON.stringify(data));
 }
