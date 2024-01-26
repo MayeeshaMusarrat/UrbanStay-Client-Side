@@ -1,8 +1,8 @@
 # UrbanStay
 
 Welcome to UrbanStay – Your Ultimate Accommodation Solution!
-
-![UrbanStay Logo](https://raw.githubusercontent.com/MayeeshaMusarrat/UrbanStay-Client-Side/main/Project_demo/LandingPage.png)
+<br>
+![LandingPage](https://github.com/MayeeshaMusarrat/UrbanStay-Client-Side/assets/112959521/91b9a704-df9c-45ca-9247-0e5507d100fd)
 
 ## Overview
 
