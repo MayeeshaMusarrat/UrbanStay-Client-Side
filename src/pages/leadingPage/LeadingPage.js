@@ -67,7 +67,7 @@ const LeadingPage = () => {
           data-animate-on-scroll
         >
           <div className="flex flex-col items-start justify-start gap-[33px]">
-            <b className="w-[666px] relative tracking-[0.1px] leading-[40px] inline-block h-[79px] shrink-0">
+            <b className="w-[666px] relative tracking-[0.1px] leading-[40px] inline-block h-[79px] shrink-0 text-darkblue-400">
               We are extremely grateful to you for wanting to join our vast
               community!
             </b>
@@ -81,7 +81,7 @@ const LeadingPage = () => {
                 {`us to guide you through our service for optimal experience. `}
               </span>
             </div>
-            <b className="w-[666px] relative tracking-[0.1px] leading-[40px] inline-block h-[38px] shrink-0">{`Let’s Get Started! `}</b>
+            <b className="w-[666px] text-darkblue-400 relative tracking-[0.1px] leading-[40px] inline-block h-[38px] shrink-0">{`Let’s Get Started! `}</b>
             <div className="w-[667px] relative text-base leading-[23px] font-medium font-inter text-black inline-block">
               <span className="capitalize">Kindly</span>
               <span className="lowercase">{` select one of the options below to jumpstart your journey with `}</span>

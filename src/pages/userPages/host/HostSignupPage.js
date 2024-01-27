@@ -73,9 +73,9 @@ const HostSignupPage = () => {
               <div className="flex flex-col items-start justify-start gap-[28px]">
                 <div className="flex flex-row flex-wrap items-start justify-start gap-[7px]">
 
-                  <StaticInputField label="First Name " />
-                  <StaticInputField label="Last Name " />
-                  <StaticInputField label="Phone Number" />
+                  <StaticInputField label="First Name " width={336} />
+                  <StaticInputField label="Last Name " width={336} />
+                  <StaticInputField label="Phone Number" width={336} />
 
                 </div>
                 <UserLocation />

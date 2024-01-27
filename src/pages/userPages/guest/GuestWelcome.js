@@ -6,8 +6,8 @@ import BlueLogoIcon from "../../../components/logos/BlueLogoIcon";
 const GuestWelcome = () => {
   const navigate = useNavigate();
 
-  const onGeStartedBtnClick = useCallback(() => {
-    // Please sync "Host_signup_page" to the project
+  const onGetStartedBtnClick = useCallback(() => {
+    navigate("/guest-signup-page");
   }, []);
 
   const onGoBackBtnTextClick = useCallback(() => {
@@ -83,7 +83,7 @@ const GuestWelcome = () => {
           </p>
         </div>
         <GetStartedButtonContainer
-          onGeStartedBtnClick={onGeStartedBtnClick}
+          onGeStartedBtnClick={onGetStartedBtnClick}
           onGoBackBtnTextClick={onGoBackBtnTextClick}
         />
       </div>

@@ -1,6 +1,13 @@
+import { useMemo, useCallback } from "react";
 import { TextField } from "@mui/material";
 
-const StaticInputField = ({ label }) => {
+const StaticInputField = ({ label, width }) => {
+
+  const inputStyle = useMemo(() => {
+    return {
+      width: width,
+    };
+  }, [width]);
 
   return (
     <div className="w-[336px] flex flex-col items-start justify-start gap-[5px] text-left text-mid text-text-color font-poppins">
@@ -9,12 +16,12 @@ const StaticInputField = ({ label }) => {
         <span className="text-orangered-100">*</span>
       </div>
       <TextField
-        className="w-[336px] relative"
+        className="relative"
         color="info"
         placeholder={`Enter ${label}`}
         required={true}
         fullWidth={true}
-        sx={{ width: 336 }}
+        style={inputStyle}
         variant="outlined"
         multiline
       />
