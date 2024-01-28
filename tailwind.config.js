@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        white: "#fff",
+        "shade-01": "#fff",
         gray: {
           "100": "#83818c",
           "200": "#767575",
@@ -14,7 +14,10 @@ module.exports = {
           "600": "rgba(255, 255, 255, 0.1)",
           "700": "rgba(0, 0, 0, 0.4)",
           "800": "rgba(0, 0, 0, 0.2)",
-          "900": "rgba(0, 0, 0, 0.5)",
+          "900": "#848484",
+          "1300": "#252525",
+          "1400": "#201a1a",
+          "1700": "rgba(0, 0, 0, 0.5)",
         },
         whitesmoke: "#f2f2f2",
         ghostwhite: "#f7f6ff",
@@ -23,6 +26,7 @@ module.exports = {
           "100": "#717171",
           "200": "#766d6d",
           "300": "#4f4f4f",
+          "400": "#5a5656",
         },
         midnightblue: {
           "100": "#2c2e97",
@@ -31,7 +35,11 @@ module.exports = {
           "400": "rgba(30, 29, 133, 0.69)",
           "500": "#2e1c81",
         },
-        darkslategray: "#1c2d3a",
+        darkslategray: {
+          "100": "#474747",
+          "200": "#252b42",
+          "300": "#1c2d3a",
+        },
         red: "#ff0000",
         slateblue: {
           "100": "#4b55c4",
@@ -44,7 +52,11 @@ module.exports = {
           "200": "#cdcdcd",
           "300": "rgba(209, 209, 209, 0.95)",
         },
-        silver: "#bababa",
+        silver: {
+          "100": "#c5c2c2",
+          "200": "#bababa",
+          "300": "#b8b7b7",
+        },
         darkblue: {
           "100": "#371dae",
           "200": "rgba(39, 15, 146, 0.98)",
@@ -53,16 +65,24 @@ module.exports = {
           "500": "rgba(56, 29, 173, 0.83)",
           "600": "rgba(55, 29, 174, 0.83)",
         },
+        blueviolet: {
+          "100": "rgba(88, 57, 227, 0.93)",
+          "200": "rgba(88, 57, 227, 0.83)",
+        },
+        gainsboro: {
+          "100": "#dcdcdc",
+          "200": "#d9d9d9",
+        },
+        "neutral-03": "#ddd",
+        "shade-02": "#222",
+        "neutral-08": "#5e5e5e",
+        "neutral-06": "#b0b0b0",
         orangered: {
           "100": "#f4511e",
           "200": "rgba(244, 81, 30, 0.01)",
         },
-        "text-color": "#252b42",
         "second-text-color": "#737373",
         royalblue: "#2754ca",
-        blueviolet: "rgba(88, 57, 227, 0.93)",
-        gainsboro: "#d9d9d9",
-        "shade-02": "#222",
       },
       spacing: {},
       fontFamily: {
@@ -72,7 +92,7 @@ module.exports = {
         roboto: "Roboto",
         lato: "Lato",
         inter: "Inter",
-        "header-22pt-regular": "'SF Pro'",
+        "body-copy-14pt-regular": "'SF Pro'",
       },
       borderRadius: {
         "3xs": "10px",
@@ -82,7 +102,9 @@ module.exports = {
         "11xl": "30px",
         "31xl": "50px",
         "58xl-5": "77.5px",
+        "15xl": "34px",
         "3xs-1": "9.1px",
+        "12xs-5": "0.5px",
       },
     },
     fontSize: {
@@ -101,10 +123,10 @@ module.exports = {
       "21xl": "40px",
       "43xl": "62px",
       "2xs": "11px",
+      xs: "12px",
       xl: "20px",
       "6xl": "25px",
       "2xl-8": "21.8px",
-      xs: "12px",
       inherit: "inherit",
     },
   },

@@ -6,6 +6,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import LandingPage from "./pages/landingPage/LandingPage";
+import Browse from "./pages/browsingPage/Browse";
 import GuestSignupPage from "./pages/userPages/guest/GuestSignupPage";
 import HostSignupPage from "./pages/userPages/host/HostSignupPage";
 import SignInPage from "./pages/signInPage/SignInPage";
@@ -57,6 +58,10 @@ function App() {
         title = "Guest Signup";
         metaDescription = "";
         break;
+      case "/browse":
+        title = "Browse Properties";
+        metaDescription = "";
+        break;
     }
 
     if (title) {
@@ -76,6 +81,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<LandingPage />} />
+      <Route path="/browse" element={<Browse />} />
       <Route path="/guest-signup-page" element={<GuestSignupPage />} />
       <Route path="/host-signup-page" element={<HostSignupPage />} />
       <Route path="/signinpage" element={<SignInPage />} />

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import SearchComponent from "../../components/search/SearchComponent";
+import SearchComponent from "../../components/bars/SearchComponent";
 
 const HeroSection = () => {
   useEffect(() => {
