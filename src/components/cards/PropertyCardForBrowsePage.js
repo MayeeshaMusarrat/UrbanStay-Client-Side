@@ -1,9 +1,46 @@
-import { memo } from "react";
+import { useEffect } from "react";
 
-const PropertyCardForBrowsePage = memo(() => {
+const PropertyCardForBrowsePage = () => {
+  useEffect(() => {
+    const scrollAnimElements = document.querySelectorAll(
+      "[data-animate-on-scroll]"
+    );
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting || entry.intersectionRatio > 0) {
+            const targetElement = entry.target;
+            targetElement.classList.add("animate");
+            observer.unobserve(targetElement);
+          }
+        }
+      },
+      {
+        threshold: 0.15,
+      }
+    );
+
+    for (let i = 0; i < scrollAnimElements.length; i++) {
+      observer.observe(scrollAnimElements[i]);
+    }
+
+    return () => {
+      for (let i = 0; i < scrollAnimElements.length; i++) {
+        observer.unobserve(scrollAnimElements[i]);
+      }
+    };
+  }, []);
   return (
-    <div className="w-[324px] relative h-[429px] text-left text-sm text-shade-02 font-body-copy-14pt-regular font-poppins">
-      <div className="absolute top-[0px] left-[0px] rounded-xl bg-neutral-06 w-[324px] h-[308px]" />
+    <div
+      className="[text-decoration:none] h-[429px] w-[324px] relative [&.animate]:animate-[1s_ease_0s_1_normal_forwards_fade-in] opacity-[0] text-left text-sm text-shade-02 font-body-copy-14pt-regular hover:cursor-pointer font-poppins"
+      data-animate-on-scroll
+    >
+      <img 
+        className="absolute top-[0px] left-[0px] rounded-xl w-[324px] h-[308px] object-cover"
+        loading="lazy"
+        alt="Property"
+        src="/pic3@2x.png" 
+      />
       <div className="absolute top-[16px] left-[16px] rounded bg-shade-01 hidden flex-row items-start justify-start py-1 px-2">
         <div className="relative font-semibold">Superhost</div>
       </div>
@@ -38,25 +75,25 @@ const PropertyCardForBrowsePage = memo(() => {
           <div className="relative">$120 total</div>
         </div>
       </div>
-      <div className="absolute top-[324px] left-[235px] flex flex-row items-center justify-end gap-[4px]">
+      <div className="absolute top-[324px] left-[235px] flex flex-row items-center justify-end gap-[4px] font-poppins">
         <img
           className="w-4 relative rounded-12xs-5 h-4"
           alt=""
           src="/star-1.svg"
         />
         <div className="relative">4.91</div>
-        <div className="relative">(484)</div>
+        <div className="relative font-body-copy-14pt-regular">(484)</div>
       </div>
       <img
         className="absolute top-[294px] left-[138px] w-[49px] h-1.5"
         alt=""
         src="/ellipses.svg"
       />
-      <div className="absolute top-[16px] left-[16px] rounded bg-shade-01 flex flex-row items-start justify-start py-1 px-2 text-gray-1400">
+      <div className="absolute top-[16px] left-[16px] rounded bg-shade-01 flex flex-row items-start justify-start py-1 px-2 text-gray-200 ">
         <div className="relative font-semibold">Superhost</div>
       </div>
     </div>
   );
-});
+};
 
 export default PropertyCardForBrowsePage;

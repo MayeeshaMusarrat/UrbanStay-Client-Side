@@ -5,7 +5,7 @@ const GetStartedButtonContainer = ({
   return (
     <div className="flex flex-col items-start justify-start gap-[22px] text-left text-smi text-black font-inter">
       <button
-        className="cursor-pointer [border:none] p-2.5 bg-darkblue-100 w-37 rounded-[9.08px] h-[50px] flex flex-row flex-wrap items-center justify-center box-border hover:bg-blueviolet hover:gap-[10px] hover:cursor-pointer active:bg-darkblue-400"
+        className="cursor-pointer [border:none] p-2.5 bg-darkblue-100 w-37 rounded-[9.08px] h-[50px] flex flex-row flex-wrap items-center justify-center box-border hover:bg-darkblue-200 hover:gap-[10px] hover:cursor-pointer active:bg-darkblue-500"
         onClick={onGeStartedBtnClick}
       >
         <button className="cursor-pointer [border:none] p-0 bg-[transparent] relative text-base capitalize font-bold font-inter text-white text-center inline-block">

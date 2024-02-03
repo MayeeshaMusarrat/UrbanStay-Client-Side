@@ -7,7 +7,7 @@ const BecomeMemberButtonContainer = () => {
 
   return (
     <button
-      className="cursor-pointer [border:none] py-[21px] px-[119px] bg-darkblue-100 w-[1017px] rounded-[9.08px] flex flex-row flex-wrap items-center justify-center box-border hover:bg-darkblue-500 hover:cursor-pointer active:bg-darkblue-400"
+      className="cursor-pointer [border:none] py-[21px] px-[119px] bg-darkblue-100 w-[1017px] rounded-[9.08px] flex flex-row flex-wrap items-center justify-center box-border hover:bg-darkblue-200 hover:cursor-pointer active:bg-darkblue-500"
       id="member"
       onClick={onBecomeMemberBtnClick}
     >

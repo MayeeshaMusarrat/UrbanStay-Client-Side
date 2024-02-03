@@ -33,7 +33,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className="my-0 mx-[!important] absolute top-[calc(50%_-_12.5px)] left-[calc(50%_-_269px)] flex flex-row items-center justify-center gap-[40px] z-[0] text-left text-2xs text-gray-100 font-lato"
+      className="my-0 mx-[!important] absolute top-[calc(50%_-_350px)] left-[calc(50%_-_269px)] flex flex-row items-center justify-center gap-[40px] z-[10] text-left text-2xs text-gray-100 font-lato"
       id="navbar"
     >
       <div className="rounded-mini flex flex-row items-center justify-center py-[5px] px-0 text-slateblue-100">

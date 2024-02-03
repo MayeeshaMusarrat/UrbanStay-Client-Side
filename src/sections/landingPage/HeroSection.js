@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import SearchComponent from "../../components/bars/SearchComponent";
+import SearchBar from "../../components/bars/SearchBar";
 
 const HeroSection = () => {
   useEffect(() => {
@@ -63,7 +63,7 @@ const HeroSection = () => {
             </span>
           </b>
         </div>
-        <SearchComponent />
+        <SearchBar />
       </div>
     </section>
   );

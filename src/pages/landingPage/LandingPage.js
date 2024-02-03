@@ -10,6 +10,7 @@ import PreferenceSection from "../../sections/landingPage/PreferenceSection";
 import FeaturedSection from "../../sections/landingPage/FeaturedSection";
 import TestimonialSection from "../../sections/landingPage/TestimonialSection";
 import FAQSection from "../../sections/landingPage/FAQSection";
+import Navbar from "../../components/navigations/landingPageNavigators/Navbar";
 
 const LandingPage = () => {
   useEffect(() => {
@@ -42,28 +43,31 @@ const LandingPage = () => {
     };
   }, []);
   return (
-    <div
-      className="w-full h-[7098px] relative bg-white overflow-hidden flex flex-col items-center justify-center [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-bottom] opacity-[0]"
-      data-animate-on-scroll
-    >
+    <> 
+      <Navbar />
       <Header />
-      <HeroSection />
-      <IntroSection />
-      <ExploreBySection />
-      <Intersection />
-      <ServiceSection />
-      <PreferenceSection />
-      <FeaturedSection />
-      <div className="w-[1530px] relative bg-white h-[35px]" />
-      <section
-        className="self-stretch h-[900px] overflow-hidden shrink-0 flex flex-row flex-wrap items-center justify-center relative"
-        id="testimonials"
+      <div
+        className="w-full h-[7098px] relative bg-white overflow-hidden flex flex-col items-center justify-center [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-bottom] opacity-[0]"
+        data-animate-on-scroll
       >
-        <TestimonialSection />
-      </section>
-      <FAQSection />
-      <Footer />
+          <HeroSection />
+          <IntroSection />
+          <ExploreBySection />
+          <Intersection />
+          <ServiceSection />
+          <PreferenceSection />
+          <FeaturedSection />
+          <div className="w-[1530px] relative bg-white h-[35px]" />
+          <section
+            className="self-stretch h-[900px] overflow-hidden shrink-0 flex flex-row flex-wrap items-center justify-center relative"
+            id="testimonials"
+          >
+            <TestimonialSection />
+          </section>
+          <FAQSection />
+          <Footer />
     </div>
+    </>
   );
 };
 

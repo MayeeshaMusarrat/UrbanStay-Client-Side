@@ -1,11 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
-  theme: {
-    extend: {
-      colors: {
+  "content": [
+    "./src/**/*.{js,jsx,ts,tsx}"
+  ],
+  "theme": {
+    "extend": {
+      "colors": {
         "shade-01": "#fff",
-        gray: {
+        "gray": {
           "100": "#83818c",
           "200": "#767575",
           "300": "#2d2c2c",
@@ -15,122 +17,125 @@ module.exports = {
           "700": "rgba(0, 0, 0, 0.4)",
           "800": "rgba(0, 0, 0, 0.2)",
           "900": "#848484",
-          "1300": "#252525",
-          "1400": "#201a1a",
-          "1700": "rgba(0, 0, 0, 0.5)",
+          "1300": "#201a1a",
+          "1600": "rgba(0, 0, 0, 0.5)"
         },
-        whitesmoke: "#f2f2f2",
-        ghostwhite: "#f7f6ff",
+        "whitesmoke": "#f2f2f2",
+        "ghostwhite": "#f7f6ff",
         "neutral-04": "#d3d3d3",
-        dimgray: {
+        "dimgray": {
           "100": "#717171",
           "200": "#766d6d",
           "300": "#4f4f4f",
-          "400": "#5a5656",
+          "400": "#707070",
+          "600": "#5a5656"
         },
-        midnightblue: {
+        "midnightblue": {
           "100": "#2c2e97",
           "200": "#1e1d85",
           "300": "#0e0e46",
           "400": "rgba(30, 29, 133, 0.69)",
-          "500": "#2e1c81",
+          "500": "#2e1c81"
         },
-        darkslategray: {
+        "darkslategray": {
           "100": "#474747",
-          "200": "#252b42",
-          "300": "#1c2d3a",
+          "200": "#1c2d3a"
         },
-        red: "#ff0000",
-        slateblue: {
+        "red": "#ff0000",
+        "slateblue": {
           "100": "#4b55c4",
-          "200": "#513bb7",
+          "200": "#513bb7"
         },
-        black: "#000",
-        darkgray: "#959595",
-        lightgray: {
+        "black": "#000",
+        "darkgray": {
+          "100": "#a6a6a6",
+          "200": "#959595"
+        },
+        "lightgray": {
           "100": "#d4d2d2",
           "200": "#cdcdcd",
-          "300": "rgba(209, 209, 209, 0.95)",
+          "300": "rgba(209, 209, 209, 0.95)"
         },
-        silver: {
+        "silver": {
           "100": "#c5c2c2",
           "200": "#bababa",
-          "300": "#b8b7b7",
+          "300": "#b8b7b7"
         },
-        darkblue: {
-          "100": "#371dae",
-          "200": "rgba(39, 15, 146, 0.98)",
-          "300": "rgba(56, 29, 173, 0.82)",
-          "400": "rgba(55, 29, 174, 0.98)",
-          "500": "rgba(56, 29, 173, 0.83)",
-          "600": "rgba(55, 29, 174, 0.83)",
-        },
-        blueviolet: {
-          "100": "rgba(88, 57, 227, 0.93)",
-          "200": "rgba(88, 57, 227, 0.83)",
-        },
-        gainsboro: {
-          "100": "#dcdcdc",
-          "200": "#d9d9d9",
-        },
-        "neutral-03": "#ddd",
         "shade-02": "#222",
-        "neutral-08": "#5e5e5e",
-        "neutral-06": "#b0b0b0",
-        orangered: {
+        "darkblue": {
+          "100": "#371dae",
+          "200": "rgba(55, 29, 174, 0.83)",
+          "300": "rgba(55, 29, 174, 0.98)",
+          "400": "rgba(56, 29, 173, 0.83)",
+          "500": "rgba(39, 15, 146, 0.98)",
+          "600": "rgba(56, 29, 173, 0.82)"
+        },
+        "blueviolet": {
+          "100": "rgba(88, 57, 227, 0.83)",
+          "200": "rgba(88, 57, 227, 0.93)"
+        },
+        "gainsboro": {
+          "100": "#dcdcdc",
+          "200": "#d9d9d9"
+        },
+        "text-color": "#252b42",
+        "royalblue": "#2754ca",
+        "orangered": {
           "100": "#f4511e",
-          "200": "rgba(244, 81, 30, 0.01)",
+          "200": "rgba(244, 81, 30, 0.01)"
         },
         "second-text-color": "#737373",
-        royalblue: "#2754ca",
+        "neutral-08": "#5e5e5e",
+        "neutral-06": "#b0b0b0",
+        "neutral-03": "#ddd"
       },
-      spacing: {},
-      fontFamily: {
+      "spacing": {},
+      "fontFamily": {
         "plus-jakarta-sans": "'Plus Jakarta Sans'",
-        poppins: "Poppins",
-        montserrat: "Montserrat",
-        roboto: "Roboto",
-        lato: "Lato",
-        inter: "Inter",
-        "body-copy-14pt-regular": "'SF Pro'",
+        "poppins": "Poppins",
+        "montserrat": "Montserrat",
+        "roboto": "Roboto",
+        "lato": "Lato",
+        "header-22pt-regular": "'SF Pro'",
+        "inter": "Inter"
       },
-      borderRadius: {
+      "borderRadius": {
         "3xs": "10px",
         "8xs": "5px",
-        mini: "15px",
+        "mini": "15px",
         "4xs": "9px",
         "11xl": "30px",
         "31xl": "50px",
         "58xl-5": "77.5px",
-        "15xl": "34px",
         "3xs-1": "9.1px",
         "12xs-5": "0.5px",
-      },
+        "15xl": "34px"
+      }
     },
-    fontSize: {
-      sm: "14px",
-      base: "16px",
+    "fontSize": {
+      "sm": "14px",
+      "base": "16px",
       "5xl": "24px",
-      lg: "18px",
+      "lg": "18px",
       "3xl": "22px",
       "11xl": "30px",
       "base-5": "15.5px",
-      smi: "13px",
-      mid: "17px",
+      "smi": "13px",
+      "mid": "17px",
       "3xs": "10px",
       "2xl": "21px",
-      mini: "15px",
+      "mini": "15px",
       "21xl": "40px",
       "43xl": "62px",
       "2xs": "11px",
-      xs: "12px",
-      xl: "20px",
+      "xl": "20px",
       "6xl": "25px",
       "2xl-8": "21.8px",
-      inherit: "inherit",
-    },
+      "xs": "12px",
+      "inherit": "inherit"
+    }
   },
-  corePlugins: {
-    preflight: false,
-  },
-};
+  "corePlugins": {
+    "preflight": false
+  }
+}

@@ -125,7 +125,7 @@ const LeadingPage = () => {
           </div>
           <button
           className={`[border:none] py-[15px] px-[18px] bg-darkblue-100 rounded-[9.08px] flex flex-row items-center justify-center hover:gap-[10px] ${
-            userType === "" ?  "cursor-not-allowed bg-lightgray-100 " : "hover:bg-darkblue-300 hover:cursor-pointer active:bg-darkblue-400"
+            userType === "" ?  "cursor-not-allowed bg-lightgray-100 " : "hover:bg-darkblue-200 hover:cursor-pointer active:bg-darkblue-500"
           }`}
           onClick={onContinueButtonClick}
           disabled={userType === ""}
