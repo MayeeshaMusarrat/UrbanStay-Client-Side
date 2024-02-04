@@ -1,8 +1,8 @@
 import PriceSliderBar from "../bars/PriceSliderBar";
 
-const FilterPopup = () => {
+const FilterPopup = ({ onClose }) => {
   return (
-    <div className="w-[100px] h-[618px] overflow-hidden max-w-full max-h-full text-left text-smi text-shade-02 font-poppins">
+    <>
       <div className="absolute top-[110px] left-[20px] bg-shade-01 w-[774px] h-[410px]">
         <div className="absolute top-[5px] left-[35px] text-mini leading-[70.19%] font-medium text-black flex items-center w-[488px] h-[34.8px]">
           Price Range
@@ -81,22 +81,23 @@ const FilterPopup = () => {
             Filter Places
           </button>
         </button>
-        <div className="absolute top-[31px] left-[38px] [text-decoration:underline] leading-[70.19%] font-medium flex items-center w-[395px] h-[55px]">
+        <div className="absolute top-[31px] left-[38px] hover:[text-decoration:underline] hover:cursor-pointer leading-[70.19%] font-medium flex items-center w-[395px] h-[55px]">
           Clear selection
         </div>
         <div className="absolute top-[16.5px] left-[1.5px] box-border w-[775px] h-px border-t-[1px] border-solid border-silver-300" />
       </div>
       <div className="absolute top-[28px] left-[20px] rounded-t-15xl rounded-b-none bg-shade-01 w-[774px] h-[83px]" />
       <img
-        className="absolute top-[57px] left-[57px] rounded-t-15xl rounded-b-none w-[22px] h-[23px]"
+        className="absolute top-[57px] left-[57px] rounded-t-15xl rounded-b-none w-[22px] h-[23px] hover:cursor-pointer"
         alt=""
         src="/cross.svg"
+        onClick = {onClose}
       />
       <div className="absolute top-[105.5px] left-[20px] box-border w-[776px] h-px border-t-[1px] border-solid border-silver-300" />
       <button className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[58.5px] left-[calc(50%_-_370px)] text-mini capitalize font-semibold font-poppins text-black text-center inline-block">
         Filters
       </button>
-    </div>
+  </>
   );
 };
 

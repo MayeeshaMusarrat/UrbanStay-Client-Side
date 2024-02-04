@@ -1,5 +1,5 @@
 import FilterAndSortBar from "../../components/bars/FilterAndSortBar";
-import PropertyCardForBrowsePage from "../../components/cards/PropertyCardForBrowsePage";
+import PropertyCardForBrowsePage from "../../components/cards/browsingPage/PropertyCardForBrowsePage";
 
 const ShowPropertyOnBrowsingPageSection = () => {
   return (

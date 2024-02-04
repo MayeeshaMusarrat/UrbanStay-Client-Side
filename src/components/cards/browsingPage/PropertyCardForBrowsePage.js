@@ -55,7 +55,6 @@ const PropertyCardForBrowsePage = () => {
             Private room in San Francisco
           </div>
           <div className="relative">{`Private Room & Balcony-Connected...`}</div>
-          <div className="relative">1 queen bed</div>
           <div className="relative">Oct 23 - 28</div>
         </div>
         <div className="flex flex-row items-center justify-start gap-[4px]">
@@ -90,7 +89,7 @@ const PropertyCardForBrowsePage = () => {
         src="/ellipses.svg"
       />
       <div className="absolute top-[16px] left-[16px] rounded bg-shade-01 flex flex-row items-start justify-start py-1 px-2 text-gray-200 ">
-        <div className="relative font-semibold">Superhost</div>
+        <div className="relative font-semibold">Guesthouse</div>
       </div>
     </div>
   );

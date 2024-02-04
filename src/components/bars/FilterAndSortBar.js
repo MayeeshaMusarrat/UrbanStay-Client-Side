@@ -50,6 +50,34 @@ const FilterAndSortBar = () => {
     setFilterPopupOpen(false);
   }, []);
 
+/* 
+  const [selectedSortOption, setSelectedSortOption] = useState('default');
+  useEffect(() => {
+
+    const sortAndRenderCards = () => {
+      let sortedData = [...propertyData];
+
+      if (selectedSortOption === 'High to low price') {
+        sortedData.sort((a, b) => b.price - a.price);
+      }
+      else if (selectedSortOption === 'Low to high price') {
+        sortedData.sort((a, b) => a.price - b.price);
+      }
+      else if (selectedSortOption === 'Large to small area') {
+        sortedData.sort((a, b) => b.area - a.area);
+      }
+      else if (selectedSortOption === 'Small to large area') {
+        sortedData.sort((a, b) => a.area - b.area);
+      }
+
+      setPropertyData(sortedData);
+    };
+
+    sortAndRenderCards();
+  }, [selectedSortOption]);
+  */
+
+
   return (
     <>
       <div
@@ -62,12 +90,14 @@ const FilterAndSortBar = () => {
           </div>
           <div className="my-0 mx-[!important] absolute top-[-0.5px] right-[0px] flex flex-row items-center justify-start gap-[22px] z-[1] text-right text-sm font-lato">
             <div className="flex flex-row items-center justify-start">
-              <div className="flex flex-row items-center justify-start gap-[13px]">
+              <div className="flex flex-row items-center justify-start gap-[0px]">
                 <div className="w-[73px] relative font-semibold flex items-center h-20 shrink-0">
                   Sort By
                 </div>
+
+
                 <FormControl
-                  className="w-[298px] relative"
+                  className="relative"
                   variant="outlined"
                   sx={{
                     borderRadius: "0px 0px 0px 0px",
@@ -89,7 +119,7 @@ const FilterAndSortBar = () => {
                       display: "inline-flex",
                     },
                     "& .MuiMenuItem-root": {
-                      m: 0,
+                      m: 1,
                       p: 0,
                       height: "33.1px",
                       display: "inline-flex",
@@ -101,35 +131,30 @@ const FilterAndSortBar = () => {
                       alignItems: "center",
                       display: "inline-flex",
                     },
-                    "& .MuiInput-input": { m: 0, p: 0 },
+                    "& .MuiInput-input": { m: 0, p: 0},
                     "& .MuiInputBase-input": {
-                      textAlign: "left",
+                      
+                      textAlign: "right",
                       p: "0 !important",
                     },
                   }}
                 >
-                  <InputLabel color="info" />
                   <Select
+                   // onChange={(e) => setSelectedSortOption(e.target.value)} 
+                    id="sort-select"
                     color="info"
                     size="small"
-                    disableUnderline
-                    displayEmpty
                   >
-                    <MenuItem value="High to low price">
-                      High to low price
-                    </MenuItem>
-                    <MenuItem value="Low to high price">
-                      Low to high price
-                    </MenuItem>
-                    <MenuItem value="Large to small area">
-                      Large to small area
-                    </MenuItem>
-                    <MenuItem value="Small to large area">
-                      Small to large area
-                    </MenuItem>
-                  </Select>
-                  <FormHelperText />
-                </FormControl>
+                <MenuItem value="High to low price">High to low price</MenuItem>
+                <MenuItem value="Low to high price">Low to high price</MenuItem>
+                <MenuItem value="Large to small area">Large to small area</MenuItem>
+                <MenuItem value="Small to large area">Small to large area</MenuItem>
+              </Select>
+              <FormHelperText />
+              </FormControl>
+
+
+
               </div>
             </div>
             <button

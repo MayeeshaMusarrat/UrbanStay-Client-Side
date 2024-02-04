@@ -32,7 +32,7 @@ const FeaturedSection = () => {
   }, []);
   return (
     <section
-      className="w-[1538px] overflow-hidden flex flex-col items-center justify-start py-[86px] px-[121px] box-border gap-[50px] bg-[url('/public/featuredsection@3x.png')] bg-cover bg-no-repeat bg-[top] [&.animate]:animate-[1s_ease-out_0s_1_normal_forwards_slide-in-bottom] opacity-[0] text-center text-sm text-white font-roboto"
+      className="w-[1538px] overflow-hidden flex flex-col items-center justify-start py-[86px] px-[121px] box-border gap-[50px] bg-[url('/public/featuredsection@3x.png')] bg-cover bg-no-repeat bg-[top] [&.animate]:animate-[1s_ease-out_0s_1_normal_forwards_slide-in-bottom] opacity-[0] text-center text-sm text-shade-01 font-roboto"
       id="featured"
       data-scroll-to="featuredSection"
       data-animate-on-scroll
@@ -49,11 +49,11 @@ const FeaturedSection = () => {
         <b className="relative text-11xl tracking-[0.03px] leading-[39px] capitalize font-montserrat">
           Featured Property
         </b>
-        <div className="w-20 relative box-border h-0.5 overflow-hidden shrink-0 border-t-[0.8px] border-solid border-white" />
+        <div className="w-20 relative box-border h-0.5 overflow-hidden shrink-0 border-t-[0.8px] border-solid border-shade-01" />
       </div>
-      <div className="self-stretch relative h-[606px] text-left text-darkgray font-montserrat">
+      <div className="self-stretch relative h-[606px] text-left text-darkgray-200 font-montserrat">
         <div
-          className="absolute top-[calc(50%_-_166px)] left-[calc(50%_-_625px)] rounded-xl bg-white shadow-[6.7px_7.4px_12.5px_rgba(0,_128,_255,_0.07)] w-[496px] overflow-hidden flex flex-row items-center justify-center py-[27px] px-[30px] box-border [&.animate]:animate-[1s_ease_0.5s_1_normal_forwards_slide-in-right] opacity-[0]"
+          className="absolute top-[calc(50%_-_166px)] left-[calc(50%_-_625px)] rounded-xl bg-shade-01 shadow-[6.7px_7.4px_12.5px_rgba(0,_128,_255,_0.07)] w-[496px] overflow-hidden flex flex-row items-center justify-center py-[27px] px-[30px] box-border [&.animate]:animate-[1s_ease_0.5s_1_normal_forwards_slide-in-right] opacity-[0]"
           data-animate-on-scroll
         >
           <div className="flex flex-col items-start justify-start gap-[22px]">
@@ -64,8 +64,8 @@ const FeaturedSection = () => {
               <b className="relative tracking-[0.63px] leading-[25.25px]">
                 Spring Way
               </b>
-              <div className="flex flex-col items-start justify-start pt-[1.600000023841858px] pb-[3.6399998664855957px] pr-[0.0800018310546875px] pl-[15px] text-3xs text-white font-roboto">
-                <div className="rounded-4xs bg-darkslategray flex flex-row items-start justify-start pt-[5px] px-[15px] pb-[3px]">
+              <div className="flex flex-col items-start justify-start pt-[1.600000023841858px] pb-[3.6399998664855957px] pr-[0.0800018310546875px] pl-[15px] text-3xs text-shade-01 font-roboto">
+                <div className="rounded-4xs bg-darkslategray-200 flex flex-row items-start justify-start pt-[5px] px-[15px] pb-[3px]">
                   <div className="relative tracking-[0.63px] leading-[12px] uppercase font-medium">
                     Open house
                   </div>
@@ -87,7 +87,7 @@ const FeaturedSection = () => {
                 floors, setting the tone for the extravagance that lies within.
               </i>
             </div>
-            <div className="w-[416px] relative h-[21px] text-darkslategray">
+            <div className="w-[416px] relative h-[21px] text-darkslategray-200">
               <div className="absolute top-[1.6px] left-[0px] w-[84.2px] h-[18px]">
                 <div className="absolute top-[2px] left-[0px] overflow-hidden flex flex-row items-center justify-center max-w-[84.16000366210938px]">
                   <img
@@ -132,15 +132,14 @@ const FeaturedSection = () => {
           data-animate-on-scroll
         >
           <div className="w-[229px] my-0 mx-[!important] absolute top-[40px] left-[586px] flex flex-col items-end justify-center py-0 pr-2.5 pl-0 box-border gap-[141px] z-[0]">
-            <div className="rounded-8xs bg-white flex flex-row items-center justify-center py-1.5 px-4">
+            <div className="rounded-8xs bg-shade-01 flex flex-row items-center justify-center py-1.5 px-4">
               <b className="relative leading-[23.28px] capitalize">Featured</b>
             </div>
-          <div className="bg-midnightblue-100 flex flex-row items-center justify-center py-[7px] px-[10px] text-center text-[18px] text-white font-montserrat">
-            <div className="relative tracking-[5px] leading-[26.4px] capitalize font-semibold">
-              FAMILY HOME
+            <div className="bg-midnightblue-100 flex flex-row items-center justify-center py-[7px] px-[5px] text-center text-3xl text-shade-01 font-montserrat">
+              <div className="relative tracking-[5px] leading-[26.4px] capitalize font-semibold">
+                FAMILY HOME
+              </div>
             </div>
-          </div>
-
             <div className="w-[231px] relative h-[151px]">
               <div className="absolute right-[0px] bottom-[15px] rounded-tl-3xs rounded-tr-none rounded-br-none rounded-bl-3xs bg-slateblue-100 w-[100px] h-[87px]" />
               <img
