@@ -52,7 +52,7 @@ const Header = memo(() => {
     <>
      
       <div
-        className="self-stretch h-[69px] bg-white shadow-[0px_4px_5px_rgba(0,_0,_0,_0.25)] overflow-hidden shrink-0 flex flex-row items-center justify-center py-4 px-[15px] box-border relative gap-[308px] "
+        className="self-stretch h-[69px] bg-white shadow-[0px_0px_10px_rgba(0,_0,_0,_0.2)] overflow-hidden shrink-0 flex flex-row items-center justify-center py-4 px-[15px] box-border relative gap-[308px] "
         data-animate-on-scroll
       >
       <BlueLogoIcon logoTop={6} logoWidth={97} logoHeight={51} />

@@ -13,6 +13,7 @@ import SignInPage from "./pages/signInPage/SignInPage";
 import GuestWelcome from "./pages/userPages/guest/GuestWelcome";
 import HostWelcome from "./pages/userPages/host/HostWelcome";
 import LeadingPage from "./pages/leadingPage/LeadingPage";
+import HostingIntroduction from "./pages/hostPropertyPage/HostingIntroduction";
 
 function App() {
   const action = useNavigationType();
@@ -62,6 +63,10 @@ function App() {
         title = "Browse Properties";
         metaDescription = "";
         break;
+      case "/hosting-introduction":
+        title = "Get Started with Hosting!";
+        metaDescription = "";
+        break;
     }
 
     if (title) {
@@ -88,6 +93,7 @@ function App() {
       <Route path="/guest-welcome" element={<GuestWelcome />} />
       <Route path="/host-welcome" element={<HostWelcome />} />
       <Route path="/leading-page" element={<LeadingPage />} />
+      <Route path="/hosting-introduction" element={<HostingIntroduction />} />
     </Routes>
   );
 }
