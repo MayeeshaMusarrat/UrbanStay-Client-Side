@@ -1,78 +1,32 @@
-import { useEffect } from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import PropertyPicturesSection from "../Frame 2114";
-import ReviewSection from "../components/ReviewSection";
-import CalendarSection from "../components/CalendarSection";
-import PropertyCardContainerSection from "../components/PropertyCardContainerSection";
-import LocationSection from "../components/LocationSection";
-import PropertyInformationSection from "../components/PropertyInformationSection";
-import AmenitieSection from "../components/AmenitieSection";
+import Header1 from "../components/Header1";
+import PropertyPicturesSection from "../components/PropertyPicturesSection";
+import ReviewText from "../components/ReviewText";
+import PropertyPriceSection from "../components/BookingFrameShareSave";
+import PropertyReviewSection from "../components/ShowmoreButton";
+import Footer from "../components/Footer1";
 
 const PropertyDetailsPage = () => {
-  useEffect(() => {
-    const scrollAnimElements = document.querySelectorAll(
-      "[data-animate-on-scroll]"
-    );
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting || entry.intersectionRatio > 0) {
-            const targetElement = entry.target;
-            targetElement.classList.add("animate");
-            observer.unobserve(targetElement);
-          }
-        }
-      },
-      {
-        threshold: 0.15,
-      }
-    );
-
-    for (let i = 0; i < scrollAnimElements.length; i++) {
-      observer.observe(scrollAnimElements[i]);
-    }
-
-    return () => {
-      for (let i = 0; i < scrollAnimElements.length; i++) {
-        observer.unobserve(scrollAnimElements[i]);
-      }
-    };
-  }, []);
   return (
-    <div className="w-full relative bg-white h-[4304px] overflow-hidden text-center text-sm text-gray-200 font-roboto">
-      <Header />
-      <img
-        className="absolute top-[calc(50%_+_670px)] left-[calc(50%_-_660px)] w-[1300px] h-px"
-        alt=""
-        src="/div-npr0qi.svg"
-      />
+    <div className="w-full relative bg-shade-01 overflow-hidden flex flex-col items-start justify-start gap-[20px] tracking-[normal]">
+      <Header1 />
+      <section className="self-stretch h-[552px] flex flex-row items-start justify-start pt-0 pb-[25px] pr-2.5 pl-0 box-border max-w-full">
+        <PropertyPicturesSection />
+      </section>
+      <section className="self-stretch flex flex-row items-start justify-start py-0 px-[55px] box-border max-w-full mq750:pl-[27px] mq750:pr-[27px] mq750:box-border">
+        <div className="flex-1 flex flex-row items-end justify-start [row-gap:20px] max-w-full mq1250:flex-wrap">
+          <ReviewText />
+          <PropertyPriceSection />
+        </div>
+      </section>
+      <div className="self-stretch h-4 flex flex-row items-start justify-center py-0 px-5 box-border max-w-full">
+        <img
+          className="w-[1300px] relative max-h-full max-w-full"
+          alt=""
+          src="/div-npr0qi-1.svg"
+        />
+      </div>
+      <PropertyReviewSection />
       <Footer />
-      <PropertyPicturesSection />
-      <ReviewSection />
-      <div className="absolute top-[644px] left-[1255px] flex flex-row items-center justify-start gap-[0.21px]">
-        <div className="flex flex-col items-start justify-start py-0 pr-2 pl-0">
-          <img className="w-4 relative h-4" alt="" src="/frame.svg" />
-        </div>
-        <div className="relative leading-[18px] font-semibold">Share</div>
-      </div>
-      <div className="absolute w-[calc(100%_-_1464.9px)] top-[644px] right-[128.7px] left-[1336.2px] flex flex-row items-center justify-start gap-[0.1px]">
-        <div className="flex flex-col items-start justify-start py-0 pr-2 pl-0">
-          <img className="w-4 relative h-4" alt="" src="/frame.svg" />
-        </div>
-        <div className="relative leading-[18px] font-semibold">Save</div>
-      </div>
-      <CalendarSection />
-      <PropertyCardContainerSection />
-      <LocationSection />
-      <PropertyInformationSection />
-      <div
-        className="absolute top-[calc(50%_-_1057px)] left-[calc(50%_-_700px)] w-[950px] overflow-hidden flex flex-col items-start justify-start py-2 px-1.5 box-border gap-[15px] [&.animate]:animate-[1s_ease_0s_1_normal_forwards_fade-in] opacity-[0]"
-        data-animate-on-scroll
-      >
-        <AmenitieSection />
-        <img className="w-[944px] relative h-px" alt="" src="/div-npr0qi.svg" />
-      </div>
     </div>
   );
 };

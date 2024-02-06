@@ -1,12 +1,9 @@
-import { useState, useCallback, useEffect } from "react";
-import ReviewDetails from "./ReviewDetails";
-import PortalPopup from "./PortalPopup";
+import { useEffect } from "react";
 import RatingPieChart from "./RatingPieChart";
-import RatingBarChart from "barChart";
+import RatingBarChart from "./RatingBarChart";
 import ReviewCard from "./ReviewCard";
 
-const ReviewSection = () => {
-  const [isReviewDetailsPopupOpen, setReviewDetailsPopupOpen] = useState(false);
+const PropertyReviewSection = () => {
   useEffect(() => {
     const scrollAnimElements = document.querySelectorAll(
       "[data-animate-on-scroll]"
@@ -36,106 +33,51 @@ const ReviewSection = () => {
       }
     };
   }, []);
-
-  const openReviewDetailsPopup = useCallback(() => {
-    setReviewDetailsPopupOpen(true);
-  }, []);
-
-  const closeReviewDetailsPopup = useCallback(() => {
-    setReviewDetailsPopupOpen(false);
-  }, []);
-
   return (
-    <>
-      <div
-        className="absolute top-[calc(50%_+_688.5px)] left-[calc(50%_-_759px)] overflow-hidden flex flex-col items-start justify-start py-[21px] px-[70px] gap-[47px] [&.animate]:animate-[1s_ease_0s_1_normal_forwards_fade-in] opacity-[0] text-left text-base text-black font-roboto"
-        data-animate-on-scroll
-      >
-        <div className="flex flex-col items-start justify-start py-0 px-px gap-[8px] text-3xl">
-          <div className="w-44 relative tracking-[0.2px] leading-[28px] font-semibold inline-block h-7 shrink-0">
+    <section
+      className="self-stretch overflow-hidden flex flex-col items-center justify-start p-[21px] box-border gap-[47px] [&.animate]:animate-[1s_ease_0s_1_normal_forwards_fade-in] opacity-[0] max-w-full text-left text-3xl text-black font-roboto mq750:gap-[47px] mq1050:pt-5 mq1050:pb-5 mq1050:box-border"
+      data-animate-on-scroll
+    >
+      <div className="w-[1378px] flex flex-row items-start justify-start max-w-full">
+        <div className="w-44 flex flex-col items-start justify-start gap-[10px]">
+          <h3 className="m-0 self-stretch relative text-inherit tracking-[0.2px] leading-[28px] font-semibold font-inherit mq450:text-lg mq450:leading-[22px]">
             Reviews
-          </div>
-          <div className="w-[627px] h-[23px] flex flex-row items-center justify-start gap-[4px] text-base text-gray-200">
+          </h3>
+          <div className="flex flex-row items-center justify-start gap-[4px] text-mid text-shade-02">
             <img
-              className="w-4 relative h-[15px]"
+              className="h-[15px] w-4 relative"
               alt=""
-              src="/divs197t1q2margin.svg"
+              src="/divs197t1q2margin1.svg"
             />
-            <div className="w-[34.8px] relative h-5 text-mid">
-              <div className="absolute top-[0px] left-[0px] leading-[20px] font-semibold">
-                4.90
-              </div>
-            </div>
-            <div className="w-[5px] relative h-5">
-              <div className="absolute top-[0px] left-[0px] leading-[20px] font-semibold">
+            <div className="flex flex-row items-start justify-start gap-[5px]">
+              <div className="relative leading-[20px] font-semibold">4.90</div>
+              <div className="relative text-base leading-[20px] font-semibold">
                 ·
               </div>
             </div>
-            <div className="w-[79.6px] relative rounded h-5">
-              <div className="absolute top-[0px] left-[0px] [text-decoration:underline] leading-[20px] font-semibold">
+            <div className="rounded flex flex-row items-center justify-center text-base">
+              <div className="relative [text-decoration:underline] leading-[20px] font-semibold">
                 83 reviews
               </div>
             </div>
           </div>
         </div>
-        <div className="w-[1379px] flex flex-row items-start justify-start gap-[46px]">
-          <RatingPieChart />
-          <RatingBarChart />
-        </div>
-        <div
-          className="w-[1354px] relative h-[109px] overflow-hidden shrink-0 cursor-pointer font-poppins"
-          onClick={openReviewDetailsPopup}
-        >
-          <div className="absolute top-[15px] left-[14px] w-[1326px] h-[79px]">
-            <div className="absolute top-[0px] left-[348px] capitalize [display:-webkit-inline-box] items-center overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] w-[978px]">
-              <span className="w-full">
-                <span>{`As soon as we arrived we were greeted by the villa staff so beautifully, as they put some flowers on our necks and welcoming drinks. Our stay was amazing we felt at peace. Also Agus and his wife made us wonderful welcoming dinner every bite was delicious. Thank you for the wonderful stay. `}</span>
-                <span className="[text-decoration:underline] font-semibold">
-                  See More
-                </span>
-              </span>
-            </div>
-            <div className="absolute top-[0px] left-[0px] flex flex-row items-center justify-start gap-[21px]">
-              <img
-                className="w-[70px] relative h-[71px] object-cover"
-                alt=""
-                src="/usericon@2x.png"
-              />
-              <div className="flex flex-row items-start justify-start relative gap-[10px]">
-                <div className="w-[236px] relative capitalize inline-block h-[79px] shrink-0 z-[0]">
-                  <p className="[margin-block-start:0] [margin-block-end:10px] font-medium">
-                    mayeesha Musarrat
-                  </p>
-                </div>
-                <div className="w-[188px] absolute my-0 mx-[!important] top-[25px] left-[0px] bg-yellow h-5 overflow-hidden shrink-0 z-[1]" />
-                <div className="w-[125px] absolute my-0 mx-[!important] top-[25px] left-[0px] capitalize inline-block z-[2]">
-                  <p className="[margin-block-start:0] [margin-block-end:10px]">
-                    &nbsp;
-                  </p>
-                  <p className="m-0 text-smi font-light">23 September 2023</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <ReviewCard />
-        <div className="w-[188px] relative rounded-lg bg-white box-border h-12 text-center text-gray-200 border-[1px] border-solid border-gray-200">
-          <div className="absolute top-[14.8px] left-[23.4px] leading-[20px] font-semibold">
+      </div>
+      <div className="w-[1379px] flex flex-row items-start justify-start py-0 pr-px pl-0 box-border gap-[45px] max-w-full mq750:gap-[45px] mq1250:flex-wrap">
+        <RatingPieChart />
+        <RatingBarChart />
+      </div>
+      <ReviewCard />
+      <ReviewCard />
+      <div className="w-[1380px] h-[49px] flex flex-row items-start justify-start max-w-full">
+        <button className="cursor-pointer pt-[15px] pb-[13px] pr-[19px] pl-[22px] bg-shade-01 rounded-lg flex flex-row items-center justify-center whitespace-nowrap border-[1px] border-solid border-shade-02 hover:bg-gainsboro-300 hover:box-border hover:border-[1px] hover:border-solid hover:border-dimgray-500">
+          <div className="relative text-base leading-[20px] font-semibold font-roboto text-shade-02 text-center">
             Show more reviews
           </div>
-        </div>
+        </button>
       </div>
-      {isReviewDetailsPopupOpen && (
-        <PortalPopup
-          overlayColor="rgba(113, 113, 113, 0.3)"
-          placement="Centered"
-          onOutsideClick={closeReviewDetailsPopup}
-        >
-          <ReviewDetails onClose={closeReviewDetailsPopup} />
-        </PortalPopup>
-      )}
-    </>
+    </section>
   );
 };
 
-export default ReviewSection;
+export default PropertyReviewSection;

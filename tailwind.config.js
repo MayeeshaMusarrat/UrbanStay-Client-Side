@@ -1,13 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  "content": [
-    "./src/**/*.{js,jsx,ts,tsx}"
-  ],
-  "theme": {
-    "extend": {
-      "colors": {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {
+      colors: {
         "shade-01": "#fff",
-        "gray": {
+        gray: {
           "100": "#83818c",
           "200": "#767575",
           "300": "#2d2c2c",
@@ -17,125 +15,174 @@ module.exports = {
           "700": "rgba(0, 0, 0, 0.4)",
           "800": "rgba(0, 0, 0, 0.2)",
           "900": "#848484",
+          "1000": "#111",
+          "1100": "#020202",
+          "1200": "#787878",
           "1300": "#201a1a",
-          "1600": "rgba(0, 0, 0, 0.5)"
+          "1500": "rgba(255, 255, 255, 0)",
+          "1600": "rgba(0, 0, 0, 0.5)",
         },
-        "whitesmoke": "#f2f2f2",
-        "ghostwhite": "#f7f6ff",
-        "neutral-04": "#d3d3d3",
-        "dimgray": {
+        whitesmoke: {
+          "100": "#f9f9f9",
+          "200": "#f2f2f2",
+        },
+        "shade-02": "#222",
+        gainsboro: {
+          "100": "#dcdcdc",
+          "200": "#d9d9d9",
+          "300": "#e6e6e6",
+        },
+        dimgray: {
           "100": "#717171",
           "200": "#766d6d",
           "300": "#4f4f4f",
           "400": "#707070",
-          "600": "#5a5656"
+          "500": "#545454",
+          "600": "#5a5656",
+          "700": "rgba(98, 95, 95, 0.34)",
+          "800": "rgba(98, 95, 95, 0.35)",
         },
-        "midnightblue": {
-          "100": "#2c2e97",
-          "200": "#1e1d85",
-          "300": "#0e0e46",
-          "400": "rgba(30, 29, 133, 0.69)",
-          "500": "#2e1c81"
-        },
-        "darkslategray": {
-          "100": "#474747",
-          "200": "#1c2d3a"
-        },
-        "red": "#ff0000",
-        "slateblue": {
-          "100": "#4b55c4",
-          "200": "#513bb7"
-        },
-        "black": "#000",
-        "darkgray": {
+        black: "#000",
+        yellow: "#fff500",
+        springgreen: "#00ff66",
+        "neutral-03": "#ddd",
+        darkgray: {
           "100": "#a6a6a6",
-          "200": "#959595"
+          "200": "#959595",
+          "300": "#a4a0a0",
+          "400": "#acacac",
         },
-        "lightgray": {
-          "100": "#d4d2d2",
-          "200": "#cdcdcd",
-          "300": "rgba(209, 209, 209, 0.95)"
-        },
-        "silver": {
-          "100": "#c5c2c2",
-          "200": "#bababa",
-          "300": "#b8b7b7"
-        },
-        "shade-02": "#222",
-        "darkblue": {
+        "neutral-06": "#b0b0b0",
+        goldenrod: "#fcaf3d",
+        darkblue: {
           "100": "#371dae",
           "200": "rgba(55, 29, 174, 0.83)",
           "300": "rgba(55, 29, 174, 0.98)",
           "400": "rgba(56, 29, 173, 0.83)",
           "500": "rgba(39, 15, 146, 0.98)",
-          "600": "rgba(56, 29, 173, 0.82)"
+          "600": "rgba(56, 29, 173, 0.82)",
+          "700": "#16169e",
         },
-        "blueviolet": {
+        silver: {
+          "100": "#c5c2c2",
+          "200": "#bababa",
+          "300": "#b8b7b7",
+          "400": "#c8c8c8",
+          "500": "#c4c4c4",
+        },
+        red: "#ff0000",
+        lightgray: {
+          "100": "#d4d2d2",
+          "200": "#cdcdcd",
+          "300": "rgba(209, 209, 209, 0.95)",
+        },
+        slateblue: {
+          "100": "#4b55c4",
+          "200": "#513bb7",
+        },
+        "neutral-04": "#d3d3d3",
+        blueviolet: {
           "100": "rgba(88, 57, 227, 0.83)",
-          "200": "rgba(88, 57, 227, 0.93)"
-        },
-        "gainsboro": {
-          "100": "#dcdcdc",
-          "200": "#d9d9d9"
+          "200": "rgba(88, 57, 227, 0.93)",
         },
         "text-color": "#252b42",
-        "royalblue": "#2754ca",
-        "orangered": {
+        royalblue: "#2754ca",
+        orangered: {
           "100": "#f4511e",
-          "200": "rgba(244, 81, 30, 0.01)"
+          "200": "rgba(244, 81, 30, 0.01)",
         },
         "second-text-color": "#737373",
+        midnightblue: {
+          "100": "#2c2e97",
+          "200": "#1e1d85",
+          "300": "#0e0e46",
+          "400": "rgba(30, 29, 133, 0.69)",
+          "500": "#2e1c81",
+        },
         "neutral-08": "#5e5e5e",
-        "neutral-06": "#b0b0b0",
-        "neutral-03": "#ddd"
+        darkslategray: {
+          "100": "#474747",
+          "200": "#1c2d3a",
+          "300": "#393939",
+          "400": "#474444",
+          "500": "#3f3e3e",
+        },
+        ghostwhite: "#f7f6ff",
+        mediumslateblue: "#5e42d4",
       },
-      "spacing": {},
-      "fontFamily": {
+      spacing: {},
+      fontFamily: {
         "plus-jakarta-sans": "'Plus Jakarta Sans'",
-        "poppins": "Poppins",
-        "montserrat": "Montserrat",
-        "roboto": "Roboto",
-        "lato": "Lato",
+        roboto: "Roboto",
+        poppins: "Poppins",
+        lato: "Lato",
         "header-22pt-regular": "'SF Pro'",
-        "inter": "Inter"
+        inter: "Inter",
+        montserrat: "Montserrat",
+        "font-awesome-5-free": "'Font Awesome 5 Free'",
+        "font-awesome-5-brands": "'Font Awesome 5 Brands'",
+        inherit: "inherit",
       },
-      "borderRadius": {
+      borderRadius: {
         "3xs": "10px",
-        "8xs": "5px",
-        "mini": "15px",
-        "4xs": "9px",
-        "11xl": "30px",
-        "31xl": "50px",
         "58xl-5": "77.5px",
+        mini: "15px",
         "3xs-1": "9.1px",
         "12xs-5": "0.5px",
-        "15xl": "34px"
-      }
+        "15xl": "34px",
+        "8xs": "5px",
+        "11xl": "30px",
+        "4xs": "9px",
+        "31xl": "50px",
+        xl: "20px",
+      },
     },
-    "fontSize": {
-      "sm": "14px",
-      "base": "16px",
+    fontSize: {
+      sm: "14px",
+      base: "16px",
       "5xl": "24px",
-      "lg": "18px",
+      lgi: "19px",
+      smi: "13px",
+      mid: "17px",
       "3xl": "22px",
-      "11xl": "30px",
-      "base-5": "15.5px",
-      "smi": "13px",
-      "mid": "17px",
+      lg: "18px",
+      "base-1": "15.1px",
+      "base-6": "15.6px",
       "3xs": "10px",
+      "sm-8": "13.8px",
+      "base-5": "15.5px",
+      "7xl": "26px",
       "2xl": "21px",
-      "mini": "15px",
+      "2xs": "11px",
+      xl: "20px",
+      "11xl": "30px",
+      "6xl": "25px",
+      mini: "15px",
+      "2xl-8": "21.8px",
+      xs: "12px",
       "21xl": "40px",
       "43xl": "62px",
-      "2xs": "11px",
-      "xl": "20px",
-      "6xl": "25px",
-      "2xl-8": "21.8px",
-      "xs": "12px",
-      "inherit": "inherit"
-    }
+      inherit: "inherit",
+    },
+    screens: {
+      mq1250: {
+        raw: "screen and (max-width: 1250px)",
+      },
+      lg: {
+        max: "1200px",
+      },
+      mq1050: {
+        raw: "screen and (max-width: 1050px)",
+      },
+      mq750: {
+        raw: "screen and (max-width: 750px)",
+      },
+      mq450: {
+        raw: "screen and (max-width: 450px)",
+      },
+    },
   },
-  "corePlugins": {
-    "preflight": false
-  }
-}
+  corePlugins: {
+    preflight: false,
+  },
+};

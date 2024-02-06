@@ -1,9 +1,9 @@
 const PropertyPicturesSection = () => {
-    return (
-      <div className="absolute top-[calc(50%_-_2067px)] left-[calc(50%_-_760px)] w-[1520px] overflow-hidden flex flex-col items-start justify-start py-4 px-[68px] box-border">
-        <div className="w-[1350px] relative bg-red h-[495px]" />
-      </div>
-    );
-  };
-  
-  export default PropertyPicturesSection;  
+  return (
+    <div className="self-stretch flex-1 overflow-hidden flex flex-col items-start justify-start py-4 pr-[102px] pl-[68px] box-border max-w-full mq750:pl-[34px] mq750:pr-[51px] mq750:box-border mq450:pr-5 mq450:box-border">
+      <div className="self-stretch flex-1 relative bg-red" />
+    </div>
+  );
+};
+
+export default PropertyPicturesSection;
