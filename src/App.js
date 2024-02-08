@@ -16,6 +16,7 @@ import LeadingPage from "./pages/leadingPage/LeadingPage";
 import HostingIntroduction from "./pages/hostPropertyPage/HostingIntroduction";
 import HostProperty from "./pages/hostPropertyPage/HostProperty";
 import SendReservationRequest from "./pages/sendPropertyReservationRequestPage/sendReservationRequest";
+import OTP from "./pages/OTP/OTP";
 
 function App() {
   const action = useNavigationType();
@@ -81,6 +82,10 @@ function App() {
         title = "Send Reservation Request!";
         metaDescription = "";
         break;
+      case "/otp":
+        title = "Verify OTP";
+        metaDescription = "";
+        break;
     }
 
     if (title) {
@@ -103,6 +108,7 @@ function App() {
       <Route path="/browse" element={<Browse />} />
       <Route path="/guest-signup-page" element={<GuestSignupPage />} />
       <Route path="/host-signup-page" element={<HostSignupPage />} />
+      <Route path="/otp" element={<OTP />} />
       <Route path="/signinpage" element={<SignInPage />} />
       <Route path="/guest-welcome" element={<GuestWelcome />} />
       <Route path="/host-welcome" element={<HostWelcome />} />
