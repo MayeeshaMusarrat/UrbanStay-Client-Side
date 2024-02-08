@@ -11,8 +11,8 @@ const PropertyDescriptionSection = () => {
             Put up a catchy description for your property.
           </p>
         </div>
-        <div className="flex-1 rounded-3xs bg-shade-01 shadow-[0px_0px_25px_rgba(0,_0,_0,_0.1)] flex flex-col items-start justify-start pt-[37px] pb-[43px] pr-[26px] pl-9 box-border gap-[25px] min-w-[647px] max-w-full text-base mq1050:min-w-full">
-          <div className="w-[995px] h-[274px] relative rounded-3xs bg-shade-01 shadow-[0px_0px_25px_rgba(0,_0,_0,_0.1)] hidden max-w-full" />
+        <div className="flex-1 rounded-3xs bg-shade-01 shadow-[0px_0px_25px_rgba(0,_0,_0,_0.1)] flex flex-col items-start justify-start pt-[37px] pb-[43px] pr-[35px] pl-9 box-border gap-[25px] min-w-[1000px] max-w-full text-base mq1050:min-w-full">
+          <div className="w-[1200px] h-[274px] relative rounded-3xs bg-shade-01 shadow-[0px_0px_25px_rgba(0,_0,_0,_0.1)] hidden max-w-full" />
           <div className="relative capitalize font-medium z-[1]">description</div>
           <textarea className="bg-whitesmoke-100 [outline:none] self-stretch h-[145px] relative rounded-8xs box-border overflow-hidden shrink-0 min-w-[250px] z-[1] border-[1px] border-solid border-gainsboro-300" />
         </div>
