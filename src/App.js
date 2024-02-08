@@ -15,6 +15,7 @@ import HostWelcome from "./pages/userPages/host/HostWelcome";
 import LeadingPage from "./pages/leadingPage/LeadingPage";
 import HostingIntroduction from "./pages/hostPropertyPage/HostingIntroduction";
 import HostProperty from "./pages/hostPropertyPage/HostProperty";
+import SendReservationRequest from "./pages/sendPropertyReservationRequestPage/sendReservationRequest";
 
 function App() {
   const action = useNavigationType();
@@ -76,6 +77,10 @@ function App() {
         title = "Host Your Property";
         metaDescription = "";
         break;
+      case "/send-reservation-request":
+        title = "Send Reservation Request!";
+        metaDescription = "";
+        break;
     }
 
     if (title) {
@@ -104,6 +109,7 @@ function App() {
       <Route path="/leading-page" element={<LeadingPage />} />
       <Route path="/hosting-introduction" element={<HostingIntroduction />} />
       <Route path="/host-property" element={<HostProperty />} />
+      <Route path="/send-reservation-request" element={<SendReservationRequest />} />
     </Routes>
   );
 }

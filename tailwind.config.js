@@ -33,7 +33,6 @@ module.exports = {
           "300": "#e6e6e6",
         },
         dimgray: {
-          "100": "#717171",
           "200": "#766d6d",
           "300": "#4f4f4f",
           "400": "#707070",
@@ -41,10 +40,12 @@ module.exports = {
           "600": "#5a5656",
           "700": "rgba(98, 95, 95, 0.34)",
           "800": "rgba(98, 95, 95, 0.35)",
+          "900": "#676565",
         },
         black: "#000",
         yellow: "#fff500",
         springgreen: "#00ff66",
+        "neutral-07": "#717171",
         "neutral-03": "#ddd",
         darkgray: {
           "100": "#a6a6a6",
@@ -162,14 +163,23 @@ module.exports = {
       xs: "12px",
       "21xl": "40px",
       "43xl": "62px",
+      "13xl": "32px",
+      "17xl": "36px",
+      "10xl": "29px",
       inherit: "inherit",
     },
     screens: {
+      mq1275: {
+        raw: "screen and (max-width: 1275px)",
+      },
       mq1250: {
         raw: "screen and (max-width: 1250px)",
       },
       lg: {
         max: "1200px",
+      },
+      mq1100: {
+        raw: "screen and (max-width: 1100px)",
       },
       mq1050: {
         raw: "screen and (max-width: 1050px)",
